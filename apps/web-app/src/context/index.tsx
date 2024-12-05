@@ -1,10 +1,12 @@
-"use client";
+'use client';
 
-import { useRouter } from "next/navigation";
-import { IsClientCtxProvider } from "./isClient";
+import { IsClientCtxProvider } from './isClient';
+import ThemeRegistry from './themeRegistry';
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  const router = useRouter();
-
-  return <IsClientCtxProvider>{children}</IsClientCtxProvider>;
+	return (
+		<IsClientCtxProvider>
+			<ThemeRegistry>{children}</ThemeRegistry>
+		</IsClientCtxProvider>
+	);
 }

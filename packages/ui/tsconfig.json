@@ -1,15 +1,23 @@
 {
-  "extends": "tsconfig/react-library.json",
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["dist", "build", "node_modules"],
+  "extends": "@core/typescript-config/base.json",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+  ],
+  "exclude": [
+    "node_modules",
+  ],
   "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "baseUrl": ".",
     "paths": {
-      "@atoms/*": ["atoms/*"],
-      "@atoms": ["atoms"],
-      "@components/*": ["components/*"],
-      "@components": ["components"],
-      "@assets/*": ["assets/*"]
+      "@components/*": [
+        "components/*"
+      ],
+      "@components": [
+        "components"
+      ],
     }
   }
 }

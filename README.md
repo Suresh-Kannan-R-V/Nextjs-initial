@@ -1,79 +1,143 @@
 # Crayond's Monorepo Boilerplate - TS - V2
 
-This repository serves as a complete boilerplate for setting up a monorepo project with the help of **TurboRepo**, a powerful tool for managing monorepositories. The boilerplate comes pre-configured with a set of best practices for organizing code, managing dependencies, and building multiple packages or modules within a single repository, all while using TypeScript as the primary programming language and other essential tooling already set up for a seamless development experience.
+This repository serves as a complete boilerplate for setting up a monorepo project using **TurboRepo**, pre-configured with TypeScript and essential tooling for efficient development.
 
-## What's inside?
-
-This boilerplate includes the following packages/apps:
+## Project Structure
 
 ### Apps
+- `web-app/` - Next.js 14 application with:
+  - App Router configuration
+  - MUI Joy integration
+  - Context providers
+  - Utility functions
 
-- `web-app`: another [Next.js](https://nextjs.org/) app
+### Packages
+- `ui/` - Shared UI components library with atomic design
+- `utils/` - Common utility functions and types
 
-## Using this boilerplate
+### Tooling
+- `typescript/` - Shared TypeScript configurations
 
-### Cloning
 
-To get started with this boilerplate, you can clone the repository using the following command:
+## Features
 
-```sh
-git clone https://gitlab.com/crayond_knowledge_repo/monorepos/ts/turbo-monorepo-boilerplate-ts.git
+- **Build System**: 
+  - Turborepo for monorepo management
+  - Next.js 14 with Turbo mode
+  
+- **UI Framework**:
+  - MUI Joy components
+  - Emotion for styling
+  - Atomic design structure
+
+- **Code Quality**:
+  - Biome for formatting and linting
+  - Husky for git hooks
+  - Lint-staged for pre-commit checks
+  
+- **State & Data Management**:
+  - Zustand for state management
+  
+- **Development Tools**:
+  - Changesets for version management
+  - Custom package linking system
+  - TypeScript strict mode
+
+## Essential Commands
+
+### Development
+```bash
+# Start development
+npm run dev              # All packages
+npm run dev:web-app      # Only web app
+
+# Build
+npm run build           # Build all packages
 ```
 
-Once you have cloned the repository,
+### Code Quality
+```bash
+# Format and lint
+npm run format-and-lint:fix
 
-Rename the folder as you want and navigate to the root directory.
+# Type checking
+npm run typecheck
+```
 
-Remove the git from the current boilerplate by using the following command:
+### Package Management
+```bash
+# Link/Unlink packages
+npm run link-packages
+npm run unlink-packages
 
+# Clean project
+npm run clean
+```
+
+### Version Control
+```bash
+# Create conventional commit
+npm run commit
+
+# Package versioning
+npm run changeset    # Create changeset
+npm run version      # Update versions
+npm run release      # Publish packages
+```
+
+## Turbo Commands
+
+### Basic Development
+```bash
+# Development
+turbo dev --parallel                # Run all packages
+turbo dev --filter=@core/web-app    # Run specific package
+
+# Building
+turbo build                         # Build all
+turbo build --filter=@core/web-app  # Build specific package
+```
+
+### Advanced Filtering
+```bash
+# Build package with dependencies
+turbo build --filter=@core/web-app...
+
+# Build dependent packages
+turbo build --filter=...@core/ui
+
+# Build since last change
+turbo build --since=HEAD~1
+```
+
+## Quick Start
+
+1. Clone and setup:
 ```sh
+git clone <repository-url>
 rm -rf .git
-```
-
-Then initialize Git and add your remote origin by using the following commands:
-
-```sh
 git init
+git remote add origin <your-repo-url>
 ```
 
+2. Install and run:
 ```sh
-git remote add <remote-name> <remote-url>
+npm install
+npm run dev
 ```
 
-Then install the required dependencies using the following command:
+## Requirements
 
-```sh
-npm i
-```
+- Node.js >= 18
+- npm >= 10.2.3
 
-Now you can run this boilerplate using the below scripts
-
-### Scripts
-
-This boilerplate includes a set of pre-configured scripts that can be used to **build**, **lint**, **format** and **run** the project. The available scripts are:
-
-- `dev` - starts a development server for all the apps and packages that have a `dev` script defined.
-- `build` - builds all the apps and packages that have a `build` script defined.
-- `prepare` - installs the Husky Git hooks for linting and formatting on commit.
-
-## Useful Links
-
-Learn more:
+## Documentation Links
 
 - [Turborepo](https://turbo.build/repo/docs)
-- [Storybook](https://storybook.js.org/docs/react/get-started/install)
-- [Vite](https://vitejs.dev/)
-
-## Authors
-
-- [@harikrish07](https://gitlab.com/harikrish07)
-
-(Kindly update it if you contributed to this boilerplate)
+- [Next.js](https://nextjs.org/docs)
+- [MUI Joy](https://mui.com/joy-ui/getting-started/)
+- [Biome](https://biomejs.dev/)
 
 ## Feedback
 
-If you have any feedback, please reach out to the authors
-
-## Contributing
-
-Contributions are always welcome!
+For issues or suggestions, please open an issue or contact the maintainers.

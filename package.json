@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "turbo build",
 		"dev": "turbo dev --parallel",
-		"dev:playground": "turbo run --filter=@core/web-app",
+		"dev:web-app": "turbo run --filter=@core/web-app",
 		"link-packages": "node symlink/link-packages.js",
 		"unlink-packages": "node symlink/unlink-packages.js",
 		"format-and-lint": "biome check .",

@@ -1,4 +1,5 @@
 import { routes } from '@/utils/routes';
+import { Box, Link as JoyLink, Typography } from '@mui/joy';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -14,18 +15,44 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
 	return (
-		<div className='grid min-h-[69vh] place-items-center px-4'>
-			<div className='grid gap-3 text-center'>
-				<p className='font-semibold text-slate-500 text-xl'>
+		<Box
+			sx={{
+				minHeight: '69vh',
+				display: 'grid',
+				placeItems: 'center',
+				px: 4,
+			}}
+		>
+			<Box
+				sx={{
+					display: 'grid',
+					gap: 3,
+					textAlign: 'center',
+				}}
+			>
+				<Typography
+					level='h4'
+					sx={{
+						fontWeight: 'lg',
+						color: 'neutral.500',
+					}}
+				>
 					Oops! The page you&apos;re looking for couldn&apos;t be found.
-				</p>
-				<Link
-					className='mx-auto my-6 grid max-w-fit place-items-center font-bold text-xl'
+				</Typography>
+
+				<JoyLink
+					component={Link}
 					href={routes.home}
+					sx={{
+						mx: 'auto',
+						my: 6,
+						fontWeight: 'lg',
+						fontSize: 'xl',
+					}}
 				>
 					Return Home
-				</Link>
-			</div>
-		</div>
+				</JoyLink>
+			</Box>
+		</Box>
 	);
 }
