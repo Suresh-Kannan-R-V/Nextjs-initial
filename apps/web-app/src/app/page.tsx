@@ -1,5 +1,3 @@
-import { Button } from "@core/ui/atoms";
-
 export default function Page() {
   return (
     <div style={{ marginTop: 40 }}>
@@ -11,7 +9,6 @@ export default function Page() {
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
           Complete boilerplate for setting up a monorepo project
         </p>
-        <Button sx={{ marginTop: 2 }}>Ok</Button>
       </section>
     </div>
   );

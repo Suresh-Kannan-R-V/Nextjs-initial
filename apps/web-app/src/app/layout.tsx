@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
-import { draftMode } from "next/headers";
 import { Providers } from "../context";
 import { ThemeProvider } from "../providers/index";
 
@@ -28,8 +27,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { isEnabled } = draftMode();
-
   return (
     <html lang="en">
       <body className={`${manrope.className}`}>

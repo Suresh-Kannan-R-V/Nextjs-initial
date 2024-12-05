@@ -1,9 +1,8 @@
+"use client";
+
 /* eslint-disable sonarjs/prefer-immediate-return */
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 import { envConfig } from "@core/envconfig";
-import { localStorageKeys } from "../constants";
-// import { useNavigate } from 'react-router-dom';
-import { commonRoutes } from "@core/routes";
 
 const BASE_URL = envConfig.rest_api_url;
 
@@ -49,19 +48,12 @@ export const httpRequest: HttpRequestProps = async (
   method = "get",
   url,
   data = null,
-  config = {},
-  includeToken = false
+  config = {}
 ) => {
   // Get token from localStorage
-  const authToken = localStorage.getItem(localStorageKeys?.authToken) ?? "";
 
   // Set up headers, including Authorization if token is present
-  const headers = {
-    ...(includeToken && authToken
-      ? { Authorization: `Bearer ${authToken}` }
-      : {}),
-    ...(config.headers || {}),
-  };
+  const headers = {};
 
   const result = await axios({
     method,
@@ -98,36 +90,20 @@ export async function getRequest<T>(URL: string): Promise<T | void | any> {
 export async function postRequest<T>(
   URL: string,
   payload: object
-): Promise<T | void> {
+): Promise<any> {
   try {
     const response: AxiosResponse<any> = await axiosClient.post<T>(
       URL,
       payload
     );
     const status = response.status;
-    if (status >= 200) {
-      return { status: status, data: response?.data ?? [] };
-    } else if (status === 401) {
-      // localStorage.removeItem(localStorageKeys?.authToken);
-      // window.location.replace(commonRoutes?.login);
-    } else if (status <= 500) {
-      return { status: status, data: response?.data ?? [] };
-    }
+    return { status: status, data: response?.data ?? [] };
   } catch (error) {
     if (axios.isAxiosError(error)) {
       // Handle axios specific errors
       const status = error.response?.status;
       console.error("Error status:", status);
       console.error("Error message:", error.message);
-      if (status === 401) {
-        // localStorage.removeItem(localStorageKeys?.authToken);
-        // window.location.replace(commonRoutes?.login);
-      } else if (status === 410) {
-        localStorage.removeItem(localStorageKeys?.authToken);
-        window.location.replace(commonRoutes?.login);
-      } else if (status === 500) {
-        console.error("Server error - try again later.");
-      }
       return { status: status, data: error?.response ?? null };
     } else {
       console.error("An unexpected error occurred:", error);
@@ -140,17 +116,7 @@ export async function putRequest<T>(URL: string, payload: object) {
   try {
     const response: AxiosResponse<any> = await axiosClient.put<T>(URL, payload);
     const status = response.status;
-    if (status >= 200) {
-      return { status: status, data: response?.data ?? [] };
-    } else if (status === 401) {
-      // localStorage.removeItem(localStorageKeys?.authToken);
-      // window.location.replace(commonRoutes?.login);
-    } else if (status === 410) {
-      localStorage.removeItem(localStorageKeys?.authToken);
-      window.location.replace(commonRoutes?.login);
-    } else if (status <= 500) {
-      return { status: status, data: response?.data ?? [] };
-    }
+    return { status: status, data: response?.data ?? [] };
   } catch (error) {
     if (axios.isAxiosError(error)) {
       // Handle axios specific errors
@@ -158,8 +124,6 @@ export async function putRequest<T>(URL: string, payload: object) {
       console.error("Error status:", status);
       console.error("Error message:", error.message);
       if (status === 401) {
-        // localStorage.removeItem(localStorageKeys?.authToken);
-        // window.location.replace(commonRoutes?.login);
       } else if (status === 500) {
         console.error("Server error - try again later.");
       }

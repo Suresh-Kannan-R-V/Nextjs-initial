@@ -1,3 +1,5 @@
+"use client";
+
 import type { PaletteRange } from "@mui/joy/styles";
 import { CssVarsThemeOptions } from "@mui/joy/styles";
 

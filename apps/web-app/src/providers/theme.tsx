@@ -2,19 +2,25 @@
 
 import { theme } from "@core/theme";
 import CssBaseline from "@mui/joy/CssBaseline";
-import {
-  CssVarsProvider as JoyCssVarsProvider,
-  extendTheme,
-} from "@mui/joy/styles";
+import { CssVarsProvider, extendTheme } from "@mui/joy/styles";
+import { useEffect, useState } from "react";
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const juiTheme = extendTheme({
-    ...theme,
-  });
+  const [juiTheme, setJuiTheme] = useState<any>(null);
+
+  useEffect(() => {
+    // Call extendTheme on the client
+    const themeObj = extendTheme({ ...theme });
+    setJuiTheme(themeObj);
+  }, []);
+
+  // Prevent rendering until the theme is ready
+  if (!juiTheme) return null;
+
   return (
-    <JoyCssVarsProvider theme={juiTheme}>
+    <CssVarsProvider theme={juiTheme}>
       <CssBaseline />
       {children}
-    </JoyCssVarsProvider>
+    </CssVarsProvider>
   );
 }
