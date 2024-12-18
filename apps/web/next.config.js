@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	transpilePackages: ['@core/utils', '@core/ui', '@core/theme'],
+	transpilePackages: ['@core/utils', '@core/ui'],
+	experimental: {
+		optimizePackageImports: ['@nextui-org/react'],
+	},
 	typescript: {
 		// Set this to false if you want production builds to abort if there's type errors
 		ignoreBuildErrors: true,
