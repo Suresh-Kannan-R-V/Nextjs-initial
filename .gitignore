@@ -42,3 +42,6 @@ todos.md
 # npm link
 symlink/link-results.json
 symlink/unlink-results.json
+
+#Dir2File
+export.md

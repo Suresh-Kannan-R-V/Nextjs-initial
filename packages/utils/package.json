@@ -7,11 +7,11 @@
 		"clean": "rm -rf .turbo && rm -rf dist && rm -rf node_modules",
 		"typecheck": "tsc --noEmit"
 	},
-	"peerDependencies": {
+	"dependencies": {
 		"dayjs": "^1.11.10"
 	},
 	"devDependencies": {
 		"@core/typescript-config": "*",
-		"typescript": "^5.2.2"
+		"typescript": "^5.7.2"
 	}
 }

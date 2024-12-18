@@ -13,10 +13,10 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": [
-        "components/*"
+        "src/components/*"
       ],
       "@components": [
-        "components"
+        "src/components"
       ],
     }
   }

@@ -1,6 +1,6 @@
 {
-	"name": "@core/web-app",
-	"version": "0.1.0",
+	"name": "@core/web",
+	"version": "0.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "next dev --turbo",
@@ -12,23 +12,19 @@
 	},
 	"dependencies": {
 		"@core/ui": "*",
-		"@core/theme": "*",
 		"@core/utils": "*",
-		"@emotion/cache": "latest",
-		"@emotion/react": "latest",
-		"@emotion/styled": "latest",
-		"@mui/joy": "latest",
+		"@nextui-org/react": "^2.6.8",
 		"ahooks": "^3.7.8",
-		"dayjs": "^1.11.10",
+		"framer-motion": "^11.15.0",
 		"next": "14.2.20",
-		"react-icons": "^5.0.1",
+		"nuqs": "^2.2.3",
 		"react": "^18",
 		"react-dom": "^18",
+		"react-icons": "^5.0.1",
 		"server-only": "^0.0.1",
 		"zustand": "^4.5.2"
 	},
 	"devDependencies": {
-		"@tailwindcss/typography": "^0.5.9",
 		"@types/node": "^20",
 		"@types/react": "^18",
 		"@types/react-dom": "^18",

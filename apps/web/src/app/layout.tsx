@@ -1,5 +1,13 @@
+import { Providers } from '@/context';
 import type { Metadata, Viewport } from 'next';
-import { Providers } from '../context';
+import { Manrope } from 'next/font/google';
+import './globals.css';
+
+const manrope = Manrope({
+	subsets: ['latin'],
+	display: 'swap',
+	variable: '--font-manrope',
+});
 
 export const viewport: Viewport = {
 	width: 'device-width',
@@ -19,7 +27,9 @@ export default async function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body>
+			<body
+				className={`${manrope.className} font-semibold text-foreground-900`}
+			>
 				<Providers>{children}</Providers>
 			</body>
 		</html>
