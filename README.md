@@ -5,19 +5,20 @@ This repository serves as a complete boilerplate for setting up a monorepo proje
 ## Project Structure
 
 ### Apps
-- `web-app/` - Next.js 14 application with:
+- `web/` - Next.js 14 application with:
   - App Router configuration
-  - MUI Joy integration
+  - NextUI integration
+  - Tailwind CSS styling
   - Context providers
   - Utility functions
 
 ### Packages
 - `ui/` - Shared UI components library with atomic design
 - `utils/` - Common utility functions and types
+- `tailwind/` - Shared Tailwind configuration
 
 ### Tooling
 - `typescript/` - Shared TypeScript configurations
-
 
 ## Features
 
@@ -26,8 +27,9 @@ This repository serves as a complete boilerplate for setting up a monorepo proje
   - Next.js 14 with Turbo mode
   
 - **UI Framework**:
-  - MUI Joy components
-  - Emotion for styling
+  - NextUI components
+  - Tailwind CSS for styling
+  - Framer Motion for animations
   - Atomic design structure
 
 - **Code Quality**:
@@ -49,7 +51,7 @@ This repository serves as a complete boilerplate for setting up a monorepo proje
 ```bash
 # Start development
 npm run dev              # All packages
-npm run dev:web-app      # Only web app
+npm run dev:web          # Only web
 
 # Build
 npm run build           # Build all packages
@@ -91,17 +93,17 @@ npm run release      # Publish packages
 ```bash
 # Development
 turbo dev --parallel                # Run all packages
-turbo dev --filter=@core/web-app    # Run specific package
+turbo dev --filter=@core/web    # Run specific package
 
 # Building
 turbo build                         # Build all
-turbo build --filter=@core/web-app  # Build specific package
+turbo build --filter=@core/web  # Build specific package
 ```
 
 ### Advanced Filtering
 ```bash
 # Build package with dependencies
-turbo build --filter=@core/web-app...
+turbo build --filter=@core/web...
 
 # Build dependent packages
 turbo build --filter=...@core/ui
@@ -135,9 +137,11 @@ npm run dev
 
 - [Turborepo](https://turbo.build/repo/docs)
 - [Next.js](https://nextjs.org/docs)
-- [MUI Joy](https://mui.com/joy-ui/getting-started/)
+- [NextUI](https://nextui.org/docs/guide/introduction)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [Framer Motion](https://www.framer.com/motion/)
 - [Biome](https://biomejs.dev/)
 
 ## Feedback
 
-For issues or suggestions, please open an issue or contact the maintainers.
+For issues or suggestions, please open an issue or contact the maintainers
