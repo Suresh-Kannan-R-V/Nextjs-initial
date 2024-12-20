@@ -2,6 +2,9 @@ import { Providers } from '@/context';
 import type { Metadata, Viewport } from 'next';
 import { Manrope } from 'next/font/google';
 import './globals.css';
+import { Footer, Navbar } from '@core/ui/components';
+import { Button } from '@nextui-org/button';
+import { RiNotification3Line, RiUser3Line } from 'react-icons/ri';
 
 const manrope = Manrope({
 	subsets: ['latin'],
@@ -22,14 +25,33 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({
 	children,
-}: {
-	children: React.ReactNode;
-}) {
+}: { children: React.ReactNode }) {
+	const endContent = (
+		<>
+			<Button
+				isIconOnly
+				variant='light'
+				className='text-foreground'
+				radius='full'
+			>
+				<RiNotification3Line className='text-xl' />
+			</Button>
+			<Button
+				isIconOnly
+				variant='light'
+				className='text-foreground'
+				radius='full'
+			>
+				<RiUser3Line className='text-xl' />
+			</Button>
+		</>
+	);
 	return (
 		<html lang='en'>
 			<body
 				className={`${manrope.className} font-semibold text-foreground-900`}
 			>
+				<Navbar title='NextJS Project' endContent={endContent} />
 				<Providers>{children}</Providers>
 			</body>
 		</html>

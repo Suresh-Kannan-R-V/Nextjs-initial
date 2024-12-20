@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  @apply scroll-smooth ;
+  scrollbar-width: none;
+}
+
 .heading-1 {
   @apply text-2xl font-extrabold xl:text-3xl;
 }
