@@ -1,3 +1,3 @@
 export { Navbar } from './layout/navbar';
-export { Footer } from './layout/footer';
-export { Logo } from './layout/logo';
+export { Logo } from './componentStyled/logo';
+export { ButtonStyled } from './componentStyled/button';
