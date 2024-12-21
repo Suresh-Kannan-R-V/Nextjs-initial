@@ -9,7 +9,7 @@ export default function Page() {
 				<RatingRange value='4' range='80' />
 				<RatingRange value='3.5' range='60' />
 				<RatingRange value='2' range='30' />
-				<RatingRange value='1' range='70' />
+				<RatingRange value='1' range='0' />
 				<RatingRange value='4.5' range='80' width='8rem' />
 				<RatingRange value='5' range='20' startype='half' />
 				<RatingRange value='4' range='80' startype='half' />
