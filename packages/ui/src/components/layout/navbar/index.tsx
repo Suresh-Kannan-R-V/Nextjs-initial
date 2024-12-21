@@ -1,5 +1,5 @@
 'use client';
-import { Logo } from '@core/ui/components';
+import { ButtonStyled, Logo } from '@core/ui/components';
 import { Button, Link } from '@nextui-org/react';
 import { usePathname } from 'next/navigation';
 import { forwardRef, useEffect, useState } from 'react';
@@ -67,16 +67,17 @@ export const Navbar = forwardRef<HTMLDivElement, NavbarProps>((props, ref) => {
 								</Link>
 							</div>
 							<div className='flex gap-3'>
-								<Link>
-									<Button className='border-[#5978FF] border-1 text-[#5978FF] text-sm hover:text-[#212121] focus:outline-none'>
-										Login
-									</Button>
-								</Link>
-								<Link>
-									<Button className='bg-[#5978FF] text-white text-sm hover:focus:outline-none'>
-										Get Started
-									</Button>
-								</Link>
+								<ButtonStyled
+									text='Login'
+									onClick={() => alert('Login')}
+									variant='bordered'
+								/>
+
+								<ButtonStyled
+									text='Get Started'
+									onClick={() => alert('Get Started')}
+									variant='solid'
+								/>
 							</div>
 						</div>
 					</div>

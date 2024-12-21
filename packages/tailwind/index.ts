@@ -10,6 +10,20 @@ export default {
 	],
 	theme: {
 		extend: {
+			colors: {
+				status: {
+					statusColor: {
+						active: '#CBF2E0',
+						inCall: '#FFDAD3',
+						offline: '#E6E8E9',
+					},
+					textColor: {
+						active: '#008545',
+						inCall: '#DF3813',
+						offline: '#4E585E',
+					},
+				},
+			},
 			animation: {
 				popIn: 'appearance-in 300ms ease-out normal both',
 				popOut: 'appearance-out 60ms ease-in normal both',
