@@ -17,11 +17,15 @@ export const RatingChip: React.FC<ButtonProps> = (props) => {
 							? 'warning'
 							: 'danger'
 				}
-				endContent={<StarIcon size={props?.iconSize ?? 19} strokeWidth={0} />}
 				size='sm'
-				style={{ padding: '0px', borderRadius: '0.25rem' }}
+				style={{ borderRadius: '0.25rem', width: '55px' }}
 			>
-				<p className='text-sm'>{props?.value ?? 0}</p>
+				<div className='flex gap-1 items-center justify-center'>
+					<p className='text-sm font-medium text-xs'>
+						{props?.value >= 5 ? 5 : Number.parseFloat(props?.value.toFixed(1))}
+					</p>
+					<StarIcon size={props?.iconSize ?? 16} strokeWidth={0} />
+				</div>
 			</Chip>
 		</div>
 	);

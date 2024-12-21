@@ -5,18 +5,20 @@ interface SvgIconProps {
 	height?: number | string;
 	fill?: string;
 	isfilled?: boolean;
+	size?: number;
 }
 
 export const FilterIcon: React.FC<SvgIconProps> = ({
 	width,
 	height,
+	size,
 	fill = '#555555',
 	isfilled = true,
 }) => {
 	return (
 		<svg
-			width={width ?? '16'}
-			height={height ?? '16'}
+			width={size ?? width ?? '16'}
+			height={size ?? height ?? '16'}
 			viewBox='0 0 12 12'
 			fill={isfilled ? fill : 'none'}
 			xmlns='http://www.w3.org/2000/svg'

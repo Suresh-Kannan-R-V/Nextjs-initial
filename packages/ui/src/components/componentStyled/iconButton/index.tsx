@@ -21,11 +21,9 @@ interface ButtonProps {
 		| 'flat'
 		| 'ghost'
 		| 'faded';
-	// |'nobackground';
 	onPress?: () => void;
 	size?: string;
 }
-// putt radius for i t
 export const IconButton: React.FC<ButtonProps> = (props) => {
 	return (
 		<div className='flex gap-4 items-center'>
@@ -40,13 +38,20 @@ export const IconButton: React.FC<ButtonProps> = (props) => {
 								border: 'none',
 								borderRadius: '50%',
 							}
-						: props?.color === 'default'
+						: props?.isIconOnly
 							? {
-									borderColor: '#EBEBEB',
-									color: 'white',
+									width: '3rem',
 									borderRadius: '0.625rem',
+									borderColor: '#EBEBEB',
 								}
-							: { borderRadius: '0.625rem' }
+							: props?.color === 'default'
+								? {
+										borderColor: '#EBEBEB',
+										color: 'white',
+										borderRadius: '0.625rem',
+										width: '7rem',
+									}
+								: { borderRadius: '0.625rem', width: '7rem' }
 				}
 				size={props?.size === 'md' ? 'md' : props?.size === 'sm' ? 'sm' : 'lg'}
 			>

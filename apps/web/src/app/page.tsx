@@ -12,7 +12,7 @@ export default function Page() {
 	const [like, setLike] = useState(true);
 	return (
 		<div className='flex flex-col min-h-screen bg-[#F7F9FF] mx-auto'>
-			<RatingChip value={4.5} iconSize={18} />
+			<RatingChip value={4} />
 			<IconButton
 				isIconOnly={true}
 				iconName={<SortIcon />}
