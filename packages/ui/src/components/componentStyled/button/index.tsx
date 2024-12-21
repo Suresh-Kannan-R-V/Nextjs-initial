@@ -3,6 +3,8 @@ import { Button } from '@nextui-org/button';
 
 interface ButtonProps {
 	text?: string;
+	width?: string;
+	sidePadding?: string;
 	onClick?: () => void;
 	icon?: React.ReactNode;
 	startIcon?: React.ReactNode;
@@ -16,6 +18,8 @@ interface ButtonProps {
 
 export const ButtonStyled = ({
 	text,
+	width,
+	sidePadding,
 	onClick,
 	icon,
 	startIcon,
@@ -33,7 +37,11 @@ export const ButtonStyled = ({
 				size={size}
 				variant={variant}
 				color='primary'
-				className={`w-full border-1 ${variant === 'light' ? 'border-none hover:bg-[#fff] focus:outline-none' : ''}`}
+				className={`${width ? `w-[${width}]` : 'w-full'} relative font-medium border-1 ${
+					variant === 'light'
+						? 'border-none hover:bg-[#fff] focus:outline-none'
+						: ''
+				}`}
 				isIconOnly={!!icon}
 				disabled={disabled}
 				startContent={!icon && startIcon}
@@ -43,13 +51,13 @@ export const ButtonStyled = ({
 					<svg
 						role='img'
 						aria-label='loader'
-						className='animate-spin h-5 w-5 text-current'
+						className='animate-spin h-5 w-5 absolute left-[35%]'
 						fill='none'
 						viewBox='0 0 24 24'
 						xmlns='http://www.w3.org/2000/svg'
 					>
 						<circle
-							className='opacity-25'
+							className='opacity-50'
 							cx='12'
 							cy='12'
 							r='10'
@@ -64,7 +72,7 @@ export const ButtonStyled = ({
 					</svg>
 				}
 			>
-				{icon || text}
+				{!loading ? icon || text : <span className='invisible'>{text}</span>}
 			</Button>
 		</div>
 	);
