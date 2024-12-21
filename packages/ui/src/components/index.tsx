@@ -1,3 +1,4 @@
 export { Navbar } from './layout/navbar';
-export { Footer } from './layout/footer';
 export { Logo } from './layout/logo';
+export { StatusChip } from './layout/statusButton';
+export { SearchBar } from './layout/SearchBar';
