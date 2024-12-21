@@ -7,11 +7,12 @@ interface ButtonProps {
 	icon?: React.ReactNode;
 	startIcon?: React.ReactNode;
 	endIcon?: React.ReactNode;
-	variant?: 'solid' | 'flat' | 'bordered' | 'light';
+	variant?: 'solid' | 'flat' | 'bordered' | 'light' | 'faded';
 	size?: 'sm' | 'md' | 'lg';
 	disabled?: boolean;
 	loading?: boolean;
 	isExternal?: boolean;
+	weight?: string;
 }
 
 export const ButtonStyled = ({
@@ -24,6 +25,7 @@ export const ButtonStyled = ({
 	size = 'md',
 	disabled = false,
 	loading = false,
+	weight,
 }: ButtonProps) => {
 	return (
 		<div className='rounded-xl'>
@@ -64,7 +66,7 @@ export const ButtonStyled = ({
 					</svg>
 				}
 			>
-				{icon || text}
+				<span className={`font-${weight}`}>{icon || text}</span>
 			</Button>
 		</div>
 	);
