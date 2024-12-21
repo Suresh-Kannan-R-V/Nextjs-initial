@@ -1,12 +1,7 @@
-interface IconInterface {
-	width?: number;
-	height?: number;
-	fill?: string;
-}
-
-export const Logoimg: React.FC<IconInterface> = () => (
-	// biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
+export const Logoimg = () => (
 	<svg
+		role='img'
+		aria-label='image'
 		width='41'
 		height='32'
 		viewBox='0 0 41 32'

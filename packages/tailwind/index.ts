@@ -10,6 +10,14 @@ export default {
 	],
 	theme: {
 		extend: {
+			width: {
+				'1/4': '25%',
+				'1/2': '50%',
+				'3/4': '75%',
+				full: '100%',
+				'10p': '10%',
+				'20p': '20%',
+			},
 			animation: {
 				popIn: 'appearance-in 300ms ease-out normal both',
 				popOut: 'appearance-out 60ms ease-in normal both',
