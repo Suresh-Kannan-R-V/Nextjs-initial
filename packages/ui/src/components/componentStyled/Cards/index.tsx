@@ -20,14 +20,14 @@ export const Cards = ({ imgurl, name, role, experience }: CardItemProps) => {
 					src={imgurl}
 					width={270}
 				/>
-				<h4 className='font-semibold mt-4 text-lg'>{name}</h4>
+				<h4 className='font-semibold mt-4 text-h6'>{name}</h4>
 				<div className='flex items-center mt-2'>
 					<Role />
-					<h3 className='font-light ml-2 text-sm'>{role}</h3>
+					<h3 className='font-light ml-2 text-body1'>{role}</h3>
 				</div>
 				<div className='flex items-center mt-2 ml-1'>
 					<Experience />
-					<h3 className='font-light ml-2 text-sm'>{experience}</h3>
+					<h3 className='font-light ml-2 text-body1'>{experience}</h3>
 				</div>
 			</CardBody>
 		</Card>

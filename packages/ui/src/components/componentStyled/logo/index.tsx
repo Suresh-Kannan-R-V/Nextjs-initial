@@ -1,3 +1,4 @@
+'use client';
 import { Logoimg } from '../../../../assets/index';
 
 export const Logo = ({
