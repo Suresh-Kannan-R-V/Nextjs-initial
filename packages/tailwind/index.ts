@@ -49,7 +49,7 @@ export default {
 				},
 			},
 			fontFamily: {
-				sans: ["'Manrope Variable', sans-serif"],
+				ssans: ["'Manrope Variable', sans-serif"],
 			},
 			fontWeight: {
 				regular: '400',
