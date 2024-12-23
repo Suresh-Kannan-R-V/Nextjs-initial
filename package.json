@@ -46,5 +46,8 @@
 		"apps/*",
 		"packages/*",
 		"tooling/*"
-	]
+	],
+	"dependencies": {
+		"date-fns": "^4.1.0"
+	}
 }
