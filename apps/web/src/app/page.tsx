@@ -1,7 +1,8 @@
 'use client';
-import { ButtonStyled, Cards } from '@core/ui/components';
+import { ButtonStyled, Cards, Logo } from '@core/ui/components';
 import { Button } from '@nextui-org/button';
 import Link from 'next/link';
+import { Logoimg } from '../../../../packages/ui/assets';
 
 export default function Page() {
 	const card1 = {
