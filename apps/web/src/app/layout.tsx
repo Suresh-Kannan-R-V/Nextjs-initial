@@ -44,7 +44,7 @@ export default async function RootLayout({
 			<body
 				className={`${manrope.className} font-semibold text-foreground-900`}
 			>
-				{/* <Navbar title='NextJS Project' endContent={endContent} />   */}
+				<Navbar title='NextJS Project' endContent={endContent} />
 
 				<Providers>{children}</Providers>
 			</body>
