@@ -1,14 +1,12 @@
-interface IconInterface {
-	width?: number;
-	height?: number;
-	fill?: string;
-}
-
-export const Logoimg: React.FC<IconInterface> = () => (
-	// biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
+export const Logoimg = ({
+	width = 41,
+	height = 32,
+}: { width?: number; height?: number }) => (
 	<svg
-		width='41'
-		height='32'
+		role='img'
+		aria-label='image'
+		width={width}
+		height={height}
 		viewBox='0 0 41 32'
 		fill='none'
 		xmlns='http://www.w3.org/2000/svg'

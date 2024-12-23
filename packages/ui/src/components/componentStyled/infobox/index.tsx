@@ -14,9 +14,8 @@ export const InfoCard: React.FC<InfoProps> = ({ infodate, infotime }) => {
 		<Card className='m-3  shadow-none grid border-0   bg-primary-50 px-2'>
 			<CardBody className=' flex justify-between items-center flex-row '>
 				<p className='text-foreground-800 font-regular  text-fontSize-body2 '>
-					Booking Date & Time details{' '}
 					<span className='font-medium text-foreground-foreground text-fontSize-body2 '>
-						{infodate},{infotime}
+						Booking Date & Time details {infodate},{infotime}
 					</span>
 				</p>
 				<ButtonStyled
