@@ -6,14 +6,12 @@ import { forwardRef, useEffect, useState } from 'react';
 import { Logoimg } from '../../../../assets/index';
 
 interface NavbarProps {
+	id?: string;
 	title?: string;
-	onMenuClick?: () => void;
-	startContent?: React.ReactNode;
-	endContent?: React.ReactNode;
 }
 
 export const Navbar = forwardRef<HTMLDivElement, NavbarProps>((props, ref) => {
-	const { onMenuClick, startContent, endContent } = props;
+	const { id, title } = props;
 	const pathname = usePathname(); // Current route path
 	const [activeHash, setActiveHash] = useState<string>('');
 
@@ -29,6 +27,7 @@ export const Navbar = forwardRef<HTMLDivElement, NavbarProps>((props, ref) => {
 		<nav
 			ref={ref}
 			className='w-full h-16 border-b border-divider bg-white sticky top-0 z-40'
+			id={id}
 		>
 			<div className='mx-10 h-full max-w-8xl md:mx-2 lg:mx-10'>
 				<div className='flex h-full items-center justify-between'>
@@ -69,13 +68,13 @@ export const Navbar = forwardRef<HTMLDivElement, NavbarProps>((props, ref) => {
 							<div className='flex gap-3'>
 								<ButtonStyled
 									text='Login'
-									onClick={() => alert('Login')}
+									onPress={() => alert('Login')}
 									variant='bordered'
 								/>
 
 								<ButtonStyled
 									text='Get Started'
-									onClick={() => alert('Get Started')}
+									onPress={() => alert('Get Started')}
 									variant='solid'
 								/>
 							</div>
