@@ -1,10 +1,9 @@
 import { Providers } from '@/context';
+import { ButtonStyled, Navbar } from '@core/ui/components';
 import type { Metadata, Viewport } from 'next';
 import { Manrope } from 'next/font/google';
 import './globals.css';
-import { ButtonStyled, Navbar } from '@core/ui/components';
-import { Button } from '@nextui-org/button';
-import { RiNotification3Line, RiUser3Line } from 'react-icons/ri';
+import { Logoimg } from '@core/ui/assets';
 
 const manrope = Manrope({
 	subsets: ['latin'],
@@ -26,26 +25,23 @@ export const metadata: Metadata = {
 export default async function RootLayout({
 	children,
 }: { children: React.ReactNode }) {
-	const endContent = (
-		<>
-			{/* </ButtonStyled> */}
-			<Button
-				isIconOnly
-				variant='light'
-				className='text-foreground'
-				radius='full'
-			>
-				<RiUser3Line className='text-xl' />
-			</Button>
-		</>
-	);
 	return (
 		<html lang='en'>
 			<body
 				className={`${manrope.className} font-semibold text-foreground-900`}
 			>
-				<Navbar title='NextJS Project' endContent={endContent} />
-				<Providers>{children}</Providers>
+				<Navbar title='NextJS Project' />
+				<div className=' flex'>
+					<div className='bg-[#F7F7F7] w-20 px-1 pt-10'>
+						<div className='bg-black w-full h-20'>
+							<div>
+								<ButtonStyled icon={<Logoimg />} width={3.375} />
+							</div>
+						</div>
+					</div>
+
+					<Providers>{children}</Providers>
+				</div>
 			</body>
 		</html>
 	);

@@ -6,6 +6,7 @@ interface ButtonProps {
 	id?: string;
 	text?: string;
 	width?: number;
+	padding?: string;
 	onPress?: () => void;
 	icon?: React.ReactNode;
 	startIcon?: React.ReactNode;
@@ -21,6 +22,7 @@ export const ButtonStyled = ({
 	id,
 	text,
 	width,
+	padding,
 	onPress,
 	icon,
 	startIcon,
@@ -43,7 +45,10 @@ export const ButtonStyled = ({
 						? 'border-none hover:bg-background-50 focus:outline-none'
 						: ''
 				}`}
-				style={{ width: width ? `${width}rem` : '100%' }}
+				style={{
+					width: width ? `${width}rem` : '100%',
+					padding: padding ? `${padding}` : 'auto',
+				}}
 				isIconOnly={!!icon}
 				disabled={disabled}
 				startContent={!icon && startIcon}
