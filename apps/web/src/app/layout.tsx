@@ -2,9 +2,9 @@ import { Providers } from '@/context';
 import type { Metadata, Viewport } from 'next';
 import { Manrope } from 'next/font/google';
 import './globals.css';
-import { ButtonStyled, Navbar } from '@core/ui/components';
+import { Navbar } from '@core/ui/components';
 import { Button } from '@nextui-org/button';
-import { RiNotification3Line, RiUser3Line } from 'react-icons/ri';
+import { RiUser3Line } from 'react-icons/ri';
 
 const manrope = Manrope({
 	subsets: ['latin'],

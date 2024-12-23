@@ -1,16 +1,16 @@
 'use client';
 
-import type { RootState } from '@/store';
-import { decrement, increment } from '@/store/counter';
-import { useDispatch, useSelector } from 'react-redux';
-
+// import type { RootState } from '@/store';
+// import { decrement, increment } from '@/store/counter';
+// import { useDispatch, useSelector } from 'react-redux';
+import UserList from './components/userList';
 export default function page() {
-	const count = useSelector((state: RootState) => state?.counter?.value);
-	const dispatch = useDispatch();
+	// const count = useSelector((state: RootState) => state?.counter?.value);
+	// const dispatch = useDispatch();
 	return (
 		<div className='flex flex-col min-h-screen'>
 			<div className='flex-1 flex flex-col items-center justify-center bg-blue-100'>
-				<button
+				{/* <button
 					type='button'
 					aria-label='Increment value'
 					onClick={() => dispatch(increment())}
@@ -24,8 +24,8 @@ export default function page() {
 					onClick={() => dispatch(decrement())}
 				>
 					Decrement
-				</button>
-				hello About page
+				</button> */}
+				<UserList />
 			</div>
 		</div>
 	);
