@@ -4,12 +4,14 @@
 	"private": true,
 	"type": "module",
 	"exports": {
-		"./components": ["./src/components/index.tsx"]
+		"./components": [
+			"./src/components/index.tsx"
+		]
 	},
 	"peerDependencies": {
 		"@nextui-org/react": "^2.6.8",
-		"framer-motion": "^11.15.0",
 		"ahooks": "^3.7.10",
+		"framer-motion": "^11.15.0",
 		"react-icons": "^5.0.1"
 	},
 	"devDependencies": {
@@ -21,5 +23,9 @@
 		"eslint": "^8.53.0",
 		"react": "^18.2.0",
 		"typescript": "^5.7.2"
+	},
+	"dependencies": {
+		"@syncfusion/ej2": "^28.1.35",
+		"@syncfusion/ej2-react-inputs": "^28.1.33"
 	}
 }
