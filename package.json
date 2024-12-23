@@ -40,5 +40,12 @@
 		"node": ">=18"
 	},
 	"packageManager": "npm@10.2.3",
-	"workspaces": ["apps/*", "packages/*", "tooling/*"]
+	"workspaces": [
+		"apps/*",
+		"packages/*",
+		"tooling/*"
+	],
+	"dependencies": {
+		"date-fns": "^4.1.0"
+	}
 }
