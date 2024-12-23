@@ -1,6 +1,7 @@
 'use client';
 import { Card, CardBody } from '@nextui-org/react';
 interface namingdata {
+	id?: string;
 	name?: string;
 }
 

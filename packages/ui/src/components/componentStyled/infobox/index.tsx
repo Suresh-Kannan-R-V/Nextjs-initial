@@ -3,6 +3,7 @@ import { Card, CardBody } from '@nextui-org/react';
 import { ButtonStyled } from '../button';
 
 interface InfoProps {
+	id?: string;
 	infodate?: string;
 	infotime?: string;
 	onClick: () => void;

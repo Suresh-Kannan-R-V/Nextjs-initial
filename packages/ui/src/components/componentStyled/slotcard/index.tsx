@@ -4,6 +4,7 @@ import { Card, CardHeader } from '@nextui-org/react';
 // Define the structure of the data being passed
 
 interface SlotcardProps {
+	id?: string;
 	day?: string;
 	date?: string;
 	no_of_slots?: number;
