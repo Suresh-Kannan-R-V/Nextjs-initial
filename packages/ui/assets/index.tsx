@@ -1,5 +1,9 @@
 export { Logoimg } from './images/logo';
 export { Loader } from './images/loader';
 export { Star } from './images/star';
-export { Thumbnailimg } from './thumbnail';
-export { Play } from './play';
+export { Thumbnailimg } from './images/thumbnail';
+export { Play } from './images/play';
+export { StarIcon } from './images/star';
+export { HeartIcon } from './images/heart';
+export { SortIcon } from './images/sort';
+export { FilterIcon } from './images/filter';

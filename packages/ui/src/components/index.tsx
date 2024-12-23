@@ -7,3 +7,4 @@ export { ReviewCard } from './componentStyled/reviewCard';
 export { Inputfield } from './componentStyled/inputfield';
 export { Selectfield } from './componentStyled/selectfield';
 export { VideoCard } from './componentStyled/videocard';
+export * from './componentStyled';
