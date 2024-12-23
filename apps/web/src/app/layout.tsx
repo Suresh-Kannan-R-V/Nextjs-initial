@@ -53,6 +53,7 @@ export default async function RootLayout({
 			>
 				<Navbar title='NextJS Project' endContent={endContent} />
 				<Providers>{children}</Providers>
+				<Footer />
 			</body>
 		</html>
 	);
