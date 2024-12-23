@@ -13,11 +13,7 @@ export default function Page() {
 	return (
 		<div className=' flex flex-col gap-0 justify-center align-middle h-screen mx-auto'>
 			<div className='flex gap-5 justify-center items-center flex-col'>
-				{/* <BreadCrums text="Explore RIA's" name='Nancy John Sarikha ' /> */}
-				<SpecializedInTag
-					specializedIn='Credit Management'
-					icon={<SpecializedInIcon />}
-				/>
+				fynro
 			</div>
 		</div>
 	);
