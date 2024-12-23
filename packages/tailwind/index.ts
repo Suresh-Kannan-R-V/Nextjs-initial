@@ -10,14 +10,6 @@ export default {
 	],
 	theme: {
 		extend: {
-			width: {
-				'1/4': '25%',
-				'1/2': '50%',
-				'3/4': '75%',
-				full: '100%',
-				'10p': '10%',
-				'20p': '20%',
-			},
 			animation: {
 				popIn: 'appearance-in 300ms ease-out normal both',
 				popOut: 'appearance-out 60ms ease-in normal both',
@@ -77,6 +69,7 @@ export default {
 				footnote: ['0.75rem', { lineHeight: '1rem', letterSpacing: '0%' }],
 			},
 			borderRadius: {
+				borderRadius4px: '0.25rem',
 				borderRadius8px: '0.5rem',
 				borderRadius12px: '0.75rem',
 				borderRadius16px: '1rem',

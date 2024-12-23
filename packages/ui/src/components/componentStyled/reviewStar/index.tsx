@@ -2,22 +2,29 @@
 
 import { Star } from 'assets';
 
-interface RatingRangeProps {
+interface ReviewStarProps {
+	id?: string;
 	value?: number;
 }
 
-export const ReviewStar = ({ value = 0 }: RatingRangeProps) => {
+const StarValue = ({
+	value,
+	starValue,
+}: { value: number; starValue: number }) => {
+	if (value >= starValue) {
+		return 'full';
+	} else if (value >= starValue - 0.5) {
+		return 'half';
+	} else {
+		return 'none';
+	}
+};
+export const ReviewStar = ({ id, value = 0 }: ReviewStarProps) => {
 	return (
-		<div className='flex gap-0'>
+		<div className='flex gap-0' id={id}>
 			{[...Array(5)].map((_, i) => {
 				const starValue = i + 1;
-				if (value >= starValue) {
-					return <Star key={starValue} type='full' />;
-				} else if (value >= starValue - 0.5) {
-					return <Star key={starValue} type='half' />;
-				} else {
-					return <Star key={starValue} type='none' />;
-				}
+				return <Star key={starValue} type={StarValue({ value, starValue })} />;
 			})}
 		</div>
 	);
