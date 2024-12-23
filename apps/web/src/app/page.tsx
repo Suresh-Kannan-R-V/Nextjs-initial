@@ -7,9 +7,9 @@ import { Logoimg } from '../../../../packages/ui/assets';
 export default function Page() {
 	const card1 = {
 		id: '1',
-		name: 'name1',
-		role: 'role1',
-		experience: 'experience1',
+		name: 'Daniel Jack',
+		role: 'Credit Management',
+		experience: '3 Years Experience',
 		imgurl:
 			'https://t4.ftcdn.net/jpg/06/40/07/03/360_F_640070383_9LJ3eTRSvOiwKyrmBYgcjhSlckDnNcxl.jpg',
 	};
