@@ -22,6 +22,8 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
 		"@changesets/cli": "^2.27.7",
+		"@types/react": "^19.0.2",
+		"@types/react-dom": "^19.0.2",
 		"czg": "^1.9.4",
 		"husky": "^9.1.5",
 		"lint-staged": "^15.2.9",
@@ -44,5 +46,8 @@
 		"apps/*",
 		"packages/*",
 		"tooling/*"
-	]
+	],
+	"dependencies": {
+		"date-fns": "^4.1.0"
+	}
 }
