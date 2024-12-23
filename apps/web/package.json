@@ -16,7 +16,7 @@
 		"@nextui-org/react": "^2.6.8",
 		"ahooks": "^3.7.8",
 		"framer-motion": "^11.15.0",
-		"next": "14.2.20",
+		"next": "^14.2.20",
 		"nuqs": "^2.2.3",
 		"react": "^18",
 		"react-dom": "^18",
