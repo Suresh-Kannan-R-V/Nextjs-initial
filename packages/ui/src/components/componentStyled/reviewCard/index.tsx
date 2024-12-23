@@ -29,7 +29,7 @@ export const ReviewCard = ({
 	return (
 		<Card
 			id={id}
-			className='h-[7.563rem] w-[42.25rem] shadow-none rounded-none border-b-1 bg-background-50 text-background-500'
+			className='h-[7.563rem] w-full shadow-none rounded-none border-b-1 bg-background-50 text-background-500'
 		>
 			<div className='w-full h-24 flex flex-col gap-2'>
 				<div className='h-[2.75rem] flex'>

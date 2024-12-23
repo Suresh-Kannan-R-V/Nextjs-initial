@@ -1,31 +1,32 @@
 'use client';
-import { Star } from '@core/ui/assets';
-import {
-	ButtonStyled,
-	RatingRange,
-	ReviewCard,
-	ReviewStar,
-} from '@core/ui/components';
+import { Thumbnailimg } from '@core/ui/assets';
+import { Inputfield, Selectfield, VideoCard } from '@core/ui/components';
+import { useState } from 'react';
+
+type LabelData = {
+	label: string;
+	values: string[];
+};
 
 export default function Page() {
+	const [selectedValue, setSelectedValue] = useState<string | null>(null);
+
+	const labelData: LabelData = {
+		label: 'Animals',
+		values: ['Dog', 'Cat', 'Bird'],
+	};
+
 	return (
-		<div className='flex flex-col gap-0 justify-center align-middle h-screen mx-auto'>
-			<div className='flex gap-0 flex-col'>
-				<ButtonStyled text='hello' variant='solid' width={8} />
-				<RatingRange value='5' range='20' />
-				<RatingRange value='4' range='80' />
-				<RatingRange value='3.5' range='60' />
-				<RatingRange value='2' range='30' />
-				<RatingRange value='1' range='0' />
-				<RatingRange value='4.5' range='80' width='8rem' />
-				<RatingRange value='5' range='20' startype='half' />
-				<RatingRange value='4' range='80' startype='half' />
-				<RatingRange value='3.5' range='60' startype='half' />
-				<RatingRange value='2' range='30' startype='half' />
-				<RatingRange value='1' range='70' startype='half' />
-				<ReviewStar value={2.5} />
-				<ReviewCard />
-				<Star />
+		<div className='flex flex-col gap-10 justify-center items-center h-screen mx-auto'>
+			<div className='flex gap-5 flex-row'>
+				<Inputfield description='Brief Description of the Query' />
+			</div>
+
+			<div className='flex gap-5'>
+				<Selectfield label={labelData.label} options={labelData.values} />
+			</div>
+			<div>
+				<VideoCard SvgComponent={<Thumbnailimg />} videoTiming='05:21' />
 			</div>
 		</div>
 	);

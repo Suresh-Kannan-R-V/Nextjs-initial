@@ -30,7 +30,7 @@ export const RatingRange = ({
 				</div>
 				<div className='bg-background-200 mt-[0.438rem] w-[24.25rem] h-[0.375rem] rounded'>
 					<div
-						className='bg-[#008545] max-w-[100%] min-w-1.5 h-full rounded-borderRadius4px'
+						className='bg-success-900 max-w-[100%] min-w-1.5 h-full rounded-borderRadius4px'
 						style={{ width: `${range}%` }}
 					>
 						{' '}

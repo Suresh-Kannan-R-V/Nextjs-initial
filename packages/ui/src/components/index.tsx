@@ -4,3 +4,6 @@ export { ButtonStyled } from './componentStyled/button';
 export { RatingRange } from './componentStyled/ratingRange';
 export { ReviewStar } from './componentStyled/reviewStar';
 export { ReviewCard } from './componentStyled/reviewCard';
+export { Inputfield } from './componentStyled/inputfield';
+export { Selectfield } from './componentStyled/selectfield';
+export { VideoCard } from './componentStyled/videocard';

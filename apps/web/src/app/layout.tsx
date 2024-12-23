@@ -31,17 +31,7 @@ export default async function RootLayout({
 				className={`${manrope.className} font-semibold text-foreground-900`}
 			>
 				<Navbar title='NextJS Project' />
-				<div className=' flex'>
-					<div className='bg-[#F7F7F7] w-20 px-1 pt-10'>
-						<div className='bg-black w-full h-20'>
-							<div>
-								<ButtonStyled icon={<Logoimg />} width={3.375} />
-							</div>
-						</div>
-					</div>
-
-					<Providers>{children}</Providers>
-				</div>
+				<Providers>{children}</Providers>
 			</body>
 		</html>
 	);

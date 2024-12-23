@@ -161,6 +161,7 @@ export default {
 						success: {
 							...colors.emerald,
 							foreground: '#fff',
+							'900': '#008545',
 							DEFAULT: colors.emerald[600],
 						},
 						warning: {
