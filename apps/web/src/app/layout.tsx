@@ -2,7 +2,7 @@ import { Providers } from '@/context';
 import type { Metadata, Viewport } from 'next';
 import { Manrope } from 'next/font/google';
 import './globals.css';
-import { Footer, Navbar } from '@core/ui/components';
+import { ButtonStyled, Navbar } from '@core/ui/components';
 import { Button } from '@nextui-org/button';
 import { RiNotification3Line, RiUser3Line } from 'react-icons/ri';
 
@@ -28,14 +28,7 @@ export default async function RootLayout({
 }: { children: React.ReactNode }) {
 	const endContent = (
 		<>
-			<Button
-				isIconOnly
-				variant='light'
-				className='text-foreground'
-				radius='full'
-			>
-				<RiNotification3Line className='text-xl' />
-			</Button>
+			{/* </ButtonStyled> */}
 			<Button
 				isIconOnly
 				variant='light'
@@ -53,7 +46,6 @@ export default async function RootLayout({
 			>
 				<Navbar title='NextJS Project' endContent={endContent} />
 				<Providers>{children}</Providers>
-				<Footer />
 			</body>
 		</html>
 	);

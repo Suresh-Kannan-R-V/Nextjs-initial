@@ -1,3 +1,4 @@
+'use client';
 import { Button } from '@nextui-org/button';
 import { RiNotification3Line, RiUser3Line } from 'react-icons/ri';
 
