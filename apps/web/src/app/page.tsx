@@ -1,57 +1,52 @@
 'use client';
-import {
-	ButtonStyled,
-	Inputfield,
-	Logo,
-	Selectfield,
-	VideoCard,
-	Videopopup,
-} from '@core/ui/components';
-import { Button } from '@nextui-org/button';
-import { Dropdown } from '@nextui-org/react';
-import Link from 'next/link';
+import { Thumbnailimg } from '@core/ui/assets';
+import { Inputfield, Selectfield, VideoCard } from '@core/ui/components';
 import { useState } from 'react';
-import { Logoimg, Thumbnailimg } from '../../../../packages/ui/assets';
 
 type LabelData = {
 	label: string;
 	values: string[];
 };
+import { Button } from '@nextui-org/button';
+import { RiNotification3Line, RiUser3Line } from 'react-icons/ri';
 
 export default function Page() {
-	const labelData: LabelData = {
-		label: 'Animals',
-		values: ['Dog', 'Cat', 'Bird'],
-	};
+	const endContent = (
+		<>
+			<Button
+				isIconOnly
+				variant='light'
+				className='text-foreground'
+				radius='full'
+			>
+				<RiNotification3Line className='text-xl' />
+			</Button>
+			<Button
+				isIconOnly
+				variant='light'
+				className='text-foreground'
+				radius='full'
+			>
+				<RiUser3Line className='text-xl' />
+			</Button>
+		</>
+	);
 
 	return (
-		<div className='flex flex-col gap-10 justify-center items-center h-screen mx-auto'>
-			<div className='flex gap-5 flex-row'>
-				<Inputfield
-					id='textfield'
-					description='Brief Description of the Query'
-					isRequired={true}
-				/>
-			</div>
+		<div className='flex flex-col min-h-screen'>
+			<main className='flex-1 flex flex-col items-center justify-center'>
+				<h1 className='mb-3 text-4xl font-bold text-foreground'>
+					Welcome to Crayond&apos;s Monorepo Boilerplate
+				</h1>
 
-			<div className='flex gap-5'>
-				<Selectfield
-					id='selectfield'
-					label={labelData.label}
-					options={labelData.values}
-					placeholder='hii'
-					clearable={false}
-					isRequired={true}
-				/>
-			</div>
-			<div>
-				<VideoCard
-					id='videocard'
-					SvgComponent={<Thumbnailimg />}
-					videoTiming={321}
-				/>
-			</div>
-			<div>{/* <Videopopup /> */}</div>
+				<p className='mb-4 text-foreground/80 text-lg'>
+					Start building your application with TurboRepo, Next.js, and NextUI
+				</p>
+
+				<Button color='primary' size='lg' className='font-semibold'>
+					Get Started
+				</Button>
+			</main>
 		</div>
 	);
 }
