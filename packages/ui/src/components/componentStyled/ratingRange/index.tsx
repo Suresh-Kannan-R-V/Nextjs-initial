@@ -1,6 +1,6 @@
 'use client';
 
-import { Star } from 'assets';
+import { Star } from '@core/ui/assets';
 
 interface RatingRangeProps {
 	id?: string;
