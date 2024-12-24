@@ -5,7 +5,7 @@ import {
 	AutocompleteSection,
 } from '@nextui-org/react';
 import { Dropdown } from 'assets';
-import { div } from 'framer-motion/client';
+
 import { useState } from 'react';
 interface SelectfieldProps {
 	id: string;
