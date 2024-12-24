@@ -1,6 +1,9 @@
 'use client';
-import { ButtonStyled, ConfirmationPopups } from '@core/ui/components';
+
+import { SpecializedInTag } from '@core/ui/components';
 import { BreadCrums } from '@core/ui/components';
+import { ButtonStyled, ConfirmationPopups } from '@core/ui/components';
+import { SpecializedInIcon } from '../../../../../packages/ui/assets';
 import { Creditsimg } from '../../../../../packages/ui/assets';
 
 export default function page() {
@@ -10,7 +13,13 @@ export default function page() {
 		{ text: 'Edit Profile', name: 'Jane Smith', path: '/suresh' },
 	];
 	return (
-		<div className='h-screen bg-slate-400 flex flex-col items-center justify-around'>
+		<div className='bg-slate-400 flex flex-col h-screen justify-around items-center '>
+			<div className='bg-white p-4'>
+				<SpecializedInTag
+					specializedIn='Credit Management'
+					icon={<SpecializedInIcon />}
+				/>
+			</div>
 			<ConfirmationPopups
 				icon={<Creditsimg />}
 				heading='Credits will be deducted!'
