@@ -40,3 +40,4 @@ export const RatingRange = ({
 		</>
 	);
 };
+RatingRange.displayName = 'RatingRange';

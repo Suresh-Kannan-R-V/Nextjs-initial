@@ -13,6 +13,7 @@ interface ButtonProps {
 	endIcon?: React.ReactNode;
 	variant: 'solid' | 'flat' | 'bordered' | 'light';
 	size?: 'sm' | 'md' | 'lg';
+	color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info';
 	disabled?: boolean;
 	loading?: boolean;
 	isExternal?: boolean;
@@ -29,6 +30,7 @@ export const ButtonStyled = ({
 	endIcon,
 	variant = 'bordered',
 	size = 'md',
+	color = 'primary',
 	disabled = false,
 	loading = false,
 }: ButtonProps) => {
@@ -39,7 +41,7 @@ export const ButtonStyled = ({
 				radius='md'
 				size={size}
 				variant={variant}
-				color='primary'
+				color={color}
 				className={`relative font-medium border-1 ${
 					variant === 'light'
 						? 'border-none hover:bg-background-50 focus:outline-none'
@@ -61,3 +63,5 @@ export const ButtonStyled = ({
 		</div>
 	);
 };
+
+ButtonStyled.displayName = 'ButtonStyled';

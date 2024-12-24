@@ -1,4 +1,6 @@
 export { Navbar } from './layout/navbar';
+export { StatusChip } from './componentStyled/statusButton';
+export { SearchBar } from './componentStyled/SearchBar';
 export { Logo } from './componentStyled/logo';
 export { ButtonStyled } from './componentStyled/button';
 export { RatingRange } from './componentStyled/ratingRange';
@@ -8,3 +10,4 @@ export { Inputfield } from './componentStyled/inputfield';
 export { Selectfield } from './componentStyled/selectfield';
 export { VideoCard } from './componentStyled/videocard';
 export * from './componentStyled';
+export { TabBar } from './componentStyled/TabBar';

@@ -7,3 +7,4 @@ export { StarIcon } from './images/star';
 export { HeartIcon } from './images/heart';
 export { SortIcon } from './images/sort';
 export { FilterIcon } from './images/filter';
+export { SearchIcon } from './images/search';
