@@ -13,10 +13,18 @@ interface ButtonProps {
 	endIcon?: React.ReactNode;
 	variant: 'solid' | 'flat' | 'bordered' | 'light';
 	size?: 'sm' | 'md' | 'lg';
-	color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info';
+	color?:
+		| 'default'
+		| 'primary'
+		| 'secondary'
+		| 'success'
+		| 'warning'
+		| 'danger';
 	disabled?: boolean;
 	loading?: boolean;
 	isExternal?: boolean;
+	weight?: string;
+	fontsize?: string;
 }
 
 export const ButtonStyled = ({
@@ -33,6 +41,8 @@ export const ButtonStyled = ({
 	color = 'primary',
 	disabled = false,
 	loading = false,
+	weight,
+	fontsize,
 }: ButtonProps) => {
 	return (
 		<div className='rounded-xl' id={id}>
@@ -58,7 +68,9 @@ export const ButtonStyled = ({
 				isLoading={loading}
 				spinner={<Loader />}
 			>
-				{!loading ? icon || text : <span className='invisible'>{text}</span>}
+				<span className={`font-${weight} text-${fontsize}`}>
+					{!loading ? icon || text : <span className='invisible'>{text}</span>}
+				</span>
 			</Button>
 		</div>
 	);

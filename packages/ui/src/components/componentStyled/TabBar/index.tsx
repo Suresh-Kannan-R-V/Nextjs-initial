@@ -12,7 +12,13 @@ interface TabBarProps {
 		count?: number;
 	}[];
 	width?: number;
-	color?: 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'info';
+	color?:
+		| 'default'
+		| 'primary'
+		| 'secondary'
+		| 'success'
+		| 'warning'
+		| 'danger';
 	variant?: 'solid' | 'underlined' | 'bordered' | 'light';
 }
 
