@@ -4,3 +4,4 @@ export { ButtonStyled } from './componentStyled/button';
 export { Inputfield } from './componentStyled/inputfield';
 export { Selectfield } from './componentStyled/selectfield';
 export { VideoCard } from './componentStyled/videocard';
+export { Videopopup } from './componentStyled/videopopup';

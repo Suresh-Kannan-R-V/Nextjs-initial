@@ -5,6 +5,7 @@ import {
 	Logo,
 	Selectfield,
 	VideoCard,
+	Videopopup,
 } from '@core/ui/components';
 import { Button } from '@nextui-org/button';
 import { Dropdown } from '@nextui-org/react';
@@ -18,8 +19,6 @@ type LabelData = {
 };
 
 export default function Page() {
-	const [selectedValue, setSelectedValue] = useState<string | null>(null);
-
 	const labelData: LabelData = {
 		label: 'Animals',
 		values: ['Dog', 'Cat', 'Bird'],
@@ -28,15 +27,31 @@ export default function Page() {
 	return (
 		<div className='flex flex-col gap-10 justify-center items-center h-screen mx-auto'>
 			<div className='flex gap-5 flex-row'>
-				<Inputfield description='Brief Description of the Query' />
+				<Inputfield
+					id='textfield'
+					description='Brief Description of the Query'
+					isRequired={true}
+				/>
 			</div>
 
 			<div className='flex gap-5'>
-				<Selectfield label={labelData.label} options={labelData.values} />
+				<Selectfield
+					id='selectfield'
+					label={labelData.label}
+					options={labelData.values}
+					placeholder='hii'
+					clearable={false}
+					isRequired={true}
+				/>
 			</div>
 			<div>
-				<VideoCard SvgComponent={<Thumbnailimg />} videoTiming='05:21' />
+				<VideoCard
+					id='videocard'
+					SvgComponent={<Thumbnailimg />}
+					videoTiming={321}
+				/>
 			</div>
+			<div>{/* <Videopopup /> */}</div>
 		</div>
 	);
 }
