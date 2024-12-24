@@ -69,6 +69,7 @@ export default {
 				footnote: ['0.75rem', { lineHeight: '1rem', letterSpacing: '0%' }],
 			},
 			borderRadius: {
+				borderRadius4px: '0.25rem',
 				borderRadius8px: '0.5rem',
 				borderRadius12px: '0.75rem',
 				borderRadius16px: '1rem',
@@ -152,6 +153,8 @@ export default {
 						secondary: {
 							...colors.orange,
 							'50': '#FFF4E5',
+							'100': '#F8F8F83D',
+							'200': '#F8971F1F',
 							'500': '#F8971F',
 							'900': '#402708',
 							foreground: '#fff',
@@ -160,6 +163,7 @@ export default {
 						success: {
 							...colors.emerald,
 							foreground: '#fff',
+							'900': '#008545',
 							DEFAULT: colors.emerald[600],
 						},
 						warning: {
