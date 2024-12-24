@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '@nextui-org/button';
 import { Loader } from 'assets';
+import type { JSXElementConstructor, ReactElement } from 'react';
 
 interface ButtonProps {
 	id?: string;
@@ -8,9 +9,9 @@ interface ButtonProps {
 	width?: number;
 	padding?: string;
 	onPress?: () => void;
-	icon?: React.ReactNode;
-	startIcon?: React.ReactNode;
-	endIcon?: React.ReactNode;
+	icon?: ReactElement<any, string | JSXElementConstructor<any>>;
+	startIcon?: ReactElement<any, string | JSXElementConstructor<any>>;
+	endIcon?: ReactElement<any, string | JSXElementConstructor<any>>;
 	variant?: 'solid' | 'flat' | 'bordered' | 'light' | 'faded';
 	size?: 'sm' | 'md' | 'lg';
 	disabled?: boolean;

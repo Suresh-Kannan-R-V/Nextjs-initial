@@ -12,3 +12,4 @@ export { SortIcon } from './images/sort';
 export { Experience } from './images/experience';
 export { Role } from './images/role';
 export { RightArrow } from './images/rightArrow';
+export { FilterIcon } from './images/filter';

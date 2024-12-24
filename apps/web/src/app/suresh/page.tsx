@@ -12,7 +12,7 @@ export default function Page() {
 			<div className='flex gap-0 flex-col'>
 				<ButtonStyled text='hello' variant='bordered' loading width={8} />
 				<RatingRange value='5' range='20' />
-				<ReviewStar value={2.5} />
+				<ReviewStar value={2} />
 				<ReviewCard
 					rating={3.5}
 					name='Courtney Henry'
