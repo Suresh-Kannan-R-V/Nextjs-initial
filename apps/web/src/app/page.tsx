@@ -1,5 +1,5 @@
 'use client';
-import { Thumbnailimg } from '@core/ui/assets';
+import { SearchIcon, Thumbnailimg } from '@core/ui/assets';
 import { Inputfield, Selectfield, VideoCard } from '@core/ui/components';
 import { useState } from 'react';
 

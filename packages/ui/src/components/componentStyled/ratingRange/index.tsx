@@ -4,8 +4,8 @@ import { Star } from '@core/ui/assets';
 
 interface RatingRangeProps {
 	id?: string;
-	value?: string;
-	range?: string;
+	value?: 0 | 1 | 2 | 3 | 4 | 5;
+	range?: number;
 	width?: string;
 	startype?: 'full' | 'half';
 }
@@ -13,7 +13,7 @@ interface RatingRangeProps {
 export const RatingRange = ({
 	id,
 	value,
-	range = '1',
+	range = 1,
 	width = '26.313rem',
 	startype = 'full',
 }: RatingRangeProps) => {
@@ -40,3 +40,4 @@ export const RatingRange = ({
 		</>
 	);
 };
+RatingRange.displayName = 'RatingRange';
