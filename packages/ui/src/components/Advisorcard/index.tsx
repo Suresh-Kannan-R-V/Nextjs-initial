@@ -1,5 +1,5 @@
 'use client';
-import { Tag } from '@components/componentStyled/namingtag';
+import { SpecializedInTag, Tag } from '@components/componentStyled';
 import { HeartIcon } from '@core/ui/assets';
 import { Card, CardBody, Image } from '@nextui-org/react';
 import { useState } from 'react';
@@ -41,8 +41,12 @@ export const AdvisorCard = () => {
 					top='0.9rem'
 					left='0.9rem'
 				/>
-				<div>
+				<div className='flex items-center justify-between mt-3'>
+					<SpecializedInTag />
 					<HeartIcon onClick={handlePress} filled={isliked} />
+				</div>
+				<div>
+					<p>Nancy John Sarikha</p>
 				</div>
 			</CardBody>
 		</Card>

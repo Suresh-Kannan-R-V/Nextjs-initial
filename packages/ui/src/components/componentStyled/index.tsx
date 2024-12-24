@@ -5,3 +5,6 @@ export { ButtonStyled } from './button';
 export { Inputfield } from './inputfield';
 export { Selectfield } from './selectfield';
 export { VideoCard } from './videocard';
+export { Cards } from './Cards';
+export { Tag } from './namingtag';
+export { SpecializedInTag } from './specializedInTag';
