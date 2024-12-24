@@ -1,4 +1,3 @@
-import { PepoleSpeciality } from './componentStyled/peoplespecialityInfo/index';
 export { Navbar } from './layout/navbar';
 export { Logo } from './componentStyled/logo';
 export { ButtonStyled } from './componentStyled/button';
@@ -12,4 +11,5 @@ export { ReviewCard } from './componentStyled/reviewCard';
 export { Inputfield } from './componentStyled/inputfield';
 export { Selectfield } from './componentStyled/selectfield';
 export { VideoCard } from './componentStyled/videocard';
+export { AdvisorCard } from './Advisorcard';
 export * from './componentStyled';

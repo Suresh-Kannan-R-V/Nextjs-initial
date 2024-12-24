@@ -70,7 +70,10 @@ export default {
 			},
 			borderRadius: {
 				borderRadius4px: '0.25rem',
+				borderRadius7px: '0.45rem',
+
 				borderRadius8px: '0.5rem',
+				borderRadius10px: '0.625rem',
 				borderRadius12px: '0.75rem',
 				borderRadius16px: '1rem',
 				borderRadius20px: '1.25rem',
