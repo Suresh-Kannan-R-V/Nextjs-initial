@@ -1,3 +1,5 @@
+export { Dropdown } from './images/dropdown';
+export { Close } from './images/close';
 export { Creditsimg } from './images/credits';
 export { Logoimg } from './images/logo';
 export { Loader } from './images/loader';
