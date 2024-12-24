@@ -5,3 +5,5 @@ export { SortIcon } from './images/sort';
 export { FilterIcon } from './images/filter';
 export { Thumbnailimg } from './images/thumbnail';
 export { Play } from './images/play';
+export { ForwardArrowIcon } from './images/rightarrow';
+export { ReverseArrowIcon } from './images/leftarrow';
