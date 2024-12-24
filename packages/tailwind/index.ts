@@ -23,6 +23,11 @@ export default {
 						offline: '#4E585E',
 					},
 				},
+				navbar: {
+					...colors.slate,
+					foreground: '#fff',
+					DEFAULT: '#F7F7F7',
+				},
 			},
 			animation: {
 				popIn: 'appearance-in 300ms ease-out normal both',

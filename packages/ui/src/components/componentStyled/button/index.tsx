@@ -13,6 +13,7 @@ interface ButtonProps {
 	endIcon?: React.ReactNode;
 	variant: 'solid' | 'flat' | 'bordered' | 'light';
 	size?: 'sm' | 'md' | 'lg';
+	radius?: 'sm' | 'md' | 'lg' | 'full';
 	color?:
 		| 'default'
 		| 'primary'
@@ -38,6 +39,7 @@ export const ButtonStyled = ({
 	endIcon,
 	variant = 'bordered',
 	size = 'md',
+	radius = 'md',
 	color = 'primary',
 	disabled = false,
 	loading = false,
@@ -48,7 +50,7 @@ export const ButtonStyled = ({
 		<div className='rounded-xl' id={id}>
 			<Button
 				onPress={onPress}
-				radius='md'
+				radius={radius}
 				size={size}
 				variant={variant}
 				color={color}
