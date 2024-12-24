@@ -11,7 +11,7 @@ interface CardItemProps {
 	experience?: string;
 	value: number;
 	iconSize?: number;
-	id?:string;
+	id?: string;
 }
 
 export const Cards = ({
@@ -21,7 +21,7 @@ export const Cards = ({
 	experience,
 	value,
 	iconSize,
-        id
+	id,
 }: CardItemProps) => {
 	return (
 		<Card className=' rounded-[0.75rem] border-none shadow-none' id={id}>

@@ -5,5 +5,5 @@ interface props {
 }
 
 export const PepoleSpeciality = () => {
-	return <div></div>;
+	return <div>none</div>;
 };
