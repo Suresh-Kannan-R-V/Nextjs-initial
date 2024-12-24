@@ -17,7 +17,7 @@ export const Inputfield = ({ id, description, isRequired }: TextareaProps) => {
 		<div id={id}>
 			<Textarea
 				classNames={{
-					inputWrapper: 'bg-50 border-[#555555] border-1',
+					inputWrapper: 'bg-50 border-background-600 border-1',
 					input: [
 						'font-medium ',
 						'text-h6 ',

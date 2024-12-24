@@ -36,16 +36,16 @@ export const Selectfield = ({
 		<div id={id}>
 			<Autocomplete
 				classNames={{
-					base: 'w-[35rem] border-background-800 border-1 rounded-xl',
+					base: 'w-[35rem] border-background-600 border-1 rounded-xl',
 				}}
 				inputProps={{
 					classNames: {
 						inputWrapper: 'h-[3.75rem] bg-50',
 
-						label: 'font-regular text-body1, ',
+						label: 'font-regular text-h6',
 						input: [
 							'font-medium ',
-							'text-body1',
+							'text-h6',
 							'placeholder:text-foreground-900',
 						],
 					},

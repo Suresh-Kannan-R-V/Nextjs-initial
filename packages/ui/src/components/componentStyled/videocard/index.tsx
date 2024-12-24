@@ -2,7 +2,7 @@
 import { Button, Card, CardBody } from '@nextui-org/react';
 import { Play } from 'assets';
 import { useState } from 'react';
-import { Videopopup } from '../videopopup';
+
 interface VideoCardProps {
 	id: string;
 	SvgComponent: React.ReactNode;
@@ -46,12 +46,6 @@ export function VideoCard({ id, SvgComponent, videoTiming }: VideoCardProps) {
 					</span>
 				</div>
 			</div>
-			{showPopup && (
-				<Videopopup
-					SvgComponent={SvgComponent}
-					onclose={() => setShowPopup(false)}
-				/>
-			)}
 		</>
 	);
 }
