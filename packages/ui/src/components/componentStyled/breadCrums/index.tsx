@@ -1,4 +1,5 @@
 'use client';
+import { RightArrow } from 'assets';
 import { useRouter } from 'next/navigation';
 interface BreadCrumsProps {
 	text?: string;
@@ -29,6 +30,9 @@ export const BreadCrums = ({ text, name, path }: BreadCrumsProps) => {
 			onClick={handleNavigate}
 			onKeyDown={handleKeyDown}
 		>
+			<div className=' p-[0.375rem] rounded-borderRadius24px border-[0.047rem] border-foreground-500 mr-1'>
+				<RightArrow />
+			</div>
 			<div className='font-regular text-sm text-foreground-800'>{text}</div>/
 			<div>{name}</div>
 		</div>
