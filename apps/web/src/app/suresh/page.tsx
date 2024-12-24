@@ -10,8 +10,12 @@ export default function Page() {
 	return (
 		<div className='flex flex-col gap-0 justify-center align-middle h-screen mx-auto'>
 			<div className='flex gap-0 flex-col'>
-				<ButtonStyled text='hello' variant='bordered' loading width={8} />
-				<RatingRange value='5' range='20' />
+				{/* <ButtonStyled text='helldsfdssffo' variant='bordered' loading  /> */}
+				<ButtonStyled text='hello' variant='solid' />
+				<ButtonStyled text='helldsfdssffo' variant='flat' loading />
+				<ButtonStyled text='helldsfdssffo' variant='light' />
+				<ButtonStyled text='helldsfdssffo' variant='bordered' />
+				<RatingRange value={2} range={80} />
 				<ReviewStar value={2.5} />
 				<ReviewCard
 					rating={3.5}

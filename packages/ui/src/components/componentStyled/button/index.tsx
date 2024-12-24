@@ -11,7 +11,7 @@ interface ButtonProps {
 	icon?: React.ReactNode;
 	startIcon?: React.ReactNode;
 	endIcon?: React.ReactNode;
-	variant?: 'solid' | 'flat' | 'bordered' | 'light';
+	variant: 'solid' | 'flat' | 'bordered' | 'light';
 	size?: 'sm' | 'md' | 'lg';
 	disabled?: boolean;
 	loading?: boolean;
@@ -46,7 +46,7 @@ export const ButtonStyled = ({
 						: ''
 				}`}
 				style={{
-					width: width ? `${width}rem` : '100%',
+					width: width ? `${width}rem` : 'auto',
 					padding: padding ? `${padding}` : 'auto',
 				}}
 				isIconOnly={!!icon}
