@@ -153,6 +153,8 @@ export default {
 						secondary: {
 							...colors.orange,
 							'50': '#FFF4E5',
+							'100': '#F8F8F83D',
+							'200': '#F8971F1F',
 							'500': '#F8971F',
 							'900': '#402708',
 							foreground: '#fff',
