@@ -1,9 +1,9 @@
 'use client';
 
-import { Creditsimg, LayerIcon } from '@core/ui/assets';
-import { IconButton } from '@core/ui/components';
+import { LayerIcon } from '@core/ui/assets';
+import { CardList, IconButton } from '@core/ui/components';
+import { CustomisedPlanCard } from '../../../../../packages/ui/src/components/componentStyled/walletcards/customisedplancard';
 import Banner from './(components)/banner';
-import CardList from './(components)/cardlist';
 import TopTitle from './(components)/topTitle';
 // import Image from 'next/image';
 // import walletpng from '@core/ui/assets/wallet.png';
@@ -49,9 +49,6 @@ export default function page() {
 				title: 'Elite',
 				description: 'All-inclusive package with priority support.',
 			},
-			{
-				iscustomized: true,
-			},
 		],
 	};
 	return (
@@ -83,6 +80,7 @@ export default function page() {
 									}
 								/>
 							))}
+							<CustomisedPlanCard />
 						</span>
 					</div>
 				</span>

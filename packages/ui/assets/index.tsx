@@ -19,4 +19,4 @@ export { Role } from './images/role';
 export { CoinsGroup } from './images/coinsGroup';
 export { LayerIcon } from './images/layers';
 export { CustomPlanIcon } from './images/customplan';
-export { RightArrow } from './images/rightarrow';
+export { BannerObjects } from './images/bannerobjects';

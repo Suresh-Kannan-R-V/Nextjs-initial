@@ -4,7 +4,7 @@ interface bannerobjectsprops {
 	height?: number;
 	width?: number;
 }
-export const BannerObjets = (props: bannerobjectsprops) => {
+export const BannerObjects = (props: bannerobjectsprops) => {
 	const { size, height, width } = props;
 	return (
 		<svg

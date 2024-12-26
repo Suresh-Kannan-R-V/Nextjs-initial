@@ -1,5 +1,4 @@
-import { CoinsGroup } from '@core/ui/assets';
-import { BannerObjets } from './bannerobjects';
+import { BannerObjects, CoinsGroup } from '@core/ui/assets';
 interface BannerProps {
 	totalcredits: number;
 }
@@ -17,7 +16,7 @@ export default function Banner(props: BannerProps) {
 				<CoinsGroup />
 			</span>
 			<span className='absolute -left-6 -top-5'>
-				<BannerObjets />
+				<BannerObjects />
 			</span>
 		</div>
 	);
