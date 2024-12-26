@@ -51,3 +51,4 @@ export const ReviewCard = ({
 		</Card>
 	);
 };
+ReviewCard.displayName = 'ReviewCard';
