@@ -2,9 +2,9 @@
 
 import { Creditsimg, LayerIcon } from '@core/ui/assets';
 import { IconButton } from '@core/ui/components';
-import Banner from './components/banner';
-import CardList from './components/cardlist';
-import TopTitle from './components/topTitle';
+import Banner from './(components)/banner';
+import CardList from './(components)/cardlist';
+import TopTitle from './(components)/topTitle';
 // import Image from 'next/image';
 // import walletpng from '@core/ui/assets/wallet.png';
 export default function page() {
