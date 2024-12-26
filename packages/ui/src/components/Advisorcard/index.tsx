@@ -19,13 +19,8 @@ import { useState } from 'react';
 
 export const AdvisorCard = () => {
 	const [isliked, serIsliked] = useState(false);
-	const list = [
-		{
-			title: 'Banana',
-			img: '/images/fruit-7.jpeg',
-			price: '$7.50',
-		},
-	];
+	const [isDiscounted, setIsdiscounted] = useState(true);
+
 	const data = ['Finance Management', 'Credit Advise', 'sdfsdf', 'dsfs'];
 	const data1 = ['Tamil', 'english'];
 
@@ -65,10 +60,10 @@ export const AdvisorCard = () => {
 					<HeartIcon onClick={handlePress} filled={isliked} />
 				</div>
 				<div className='flex items-center gap-3 mt-3 mb-2'>
-					<p className='text-body1 font-medium text-foreground-foreground'>
+					<p className='text-body1 font-semibold text-foreground-foreground'>
 						Nancy John Sarikha
 					</p>
-					<StatusChip status='active' radius='sm' />
+					<StatusChip status='active' radius='sm' weight='semibold' />
 				</div>
 				<div className='flex'>
 					<p className='text-body2 font-medium  text-foreground-800 '>
@@ -86,11 +81,13 @@ export const AdvisorCard = () => {
 						title={data1}
 					/>
 				</div>
-				<div className='flex flex-row justify-between mt-3 px-2 py-4 bg-primary-50 rounded-borderRadius8px'>
+				<div className='flex flex-row justify-between mt-3 px-2 py-4 bg-primary-50 rounded-borderRadius8px items-center'>
 					<div>
-						<p className='line-through text-footnote text-foreground-800'>
-							45 credicts
-						</p>
+						{isDiscounted && (
+							<p className='line-through text-footnote text-foreground-800'>
+								45 credicts
+							</p>
+						)}
 						<p className='text-body1 text-primary-500'>35 Credicts /Min</p>
 					</div>
 					<div className='flex gap-3'>
