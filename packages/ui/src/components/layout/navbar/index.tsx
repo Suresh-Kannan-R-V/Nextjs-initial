@@ -26,7 +26,7 @@ export const Navbar = forwardRef<HTMLDivElement, NavbarProps>((props, ref) => {
 	return (
 		<nav
 			ref={ref}
-			className='w-full h-16 border-b border-divider bg-white sticky top-0 z-40'
+			className='w-full h-16 border-b border-background-500 bg-white sticky top-0 z-40'
 			id={id}
 		>
 			<div className='mx-10 h-full max-w-8xl md:mx-2 lg:mx-10'>
@@ -42,25 +42,25 @@ export const Navbar = forwardRef<HTMLDivElement, NavbarProps>((props, ref) => {
 							<div className='w-6/12 flex flex-row justify-between'>
 								<Link
 									href='#home'
-									className={`no-underline text-base ${activeHash === '#home' ? 'text-[#F8971F]' : 'text-[#555555]'} `}
+									className={`no-underline text-base ${activeHash === '#home' ? 'text-secondary-500' : 'text-foreground-800'} `}
 								>
 									Home
 								</Link>
 								<Link
 									href='#explore-advisors'
-									className={`no-underline text-base ${activeHash === '#explore-advisors' ? 'text-[#F8971F]' : 'text-[#555555]'}`}
+									className={`no-underline text-base ${activeHash === '#explore-advisors' ? 'text-secondary-500' : 'text-foreground-800'}`}
 								>
 									Explore Advisors
 								</Link>
 								<Link
 									href='#blogs'
-									className={`no-underline text-base ${activeHash === '#blogs' ? 'text-[#F8971F]' : 'text-[#555555]'}`}
+									className={`no-underline text-base ${activeHash === '#blogs' ? 'text-secondary-500' : 'text-foreground-800'}`}
 								>
 									Blogs
 								</Link>
 								<Link
 									href='#white-papers'
-									className={`no-underline text-base ${activeHash === '#white-papers' ? 'text-[#F8971F]' : 'text-[#555555]'}`}
+									className={`no-underline text-base ${activeHash === '#white-papers' ? 'text-secondary-500' : 'text-foreground-800'}`}
 								>
 									White papers
 								</Link>

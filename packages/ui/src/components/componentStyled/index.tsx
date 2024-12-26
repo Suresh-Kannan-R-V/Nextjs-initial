@@ -8,3 +8,4 @@ export { VideoCard } from './videocard';
 export { Cards } from './Cards';
 export { Tag } from './namingtag';
 export { SpecializedInTag } from './specializedInTag';
+export { StatusChip } from './statusButton';

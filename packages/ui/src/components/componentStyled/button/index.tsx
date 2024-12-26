@@ -11,8 +11,16 @@ interface ButtonProps {
 	icon?: React.ReactNode;
 	startIcon?: React.ReactNode;
 	endIcon?: React.ReactNode;
-	variant?: 'solid' | 'flat' | 'bordered' | 'light' | 'faded';
+	variant: 'solid' | 'flat' | 'bordered' | 'light';
 	size?: 'sm' | 'md' | 'lg';
+	radius?: 'sm' | 'md' | 'lg' | 'full';
+	color?:
+		| 'default'
+		| 'primary'
+		| 'secondary'
+		| 'success'
+		| 'warning'
+		| 'danger';
 	disabled?: boolean;
 	loading?: boolean;
 	isExternal?: boolean;
@@ -31,6 +39,8 @@ export const ButtonStyled = ({
 	endIcon,
 	variant = 'bordered',
 	size = 'md',
+	radius = 'md',
+	color = 'primary',
 	disabled = false,
 	loading = false,
 	weight,
@@ -40,18 +50,18 @@ export const ButtonStyled = ({
 		<div className='rounded-xl' id={id}>
 			<Button
 				onPress={onPress}
-				radius='md'
+				radius={radius}
 				size={size}
 				variant={variant}
-				color='primary'
+				color={color}
 				className={`relative font-medium border-1 ${
 					variant === 'light'
 						? 'border-none hover:bg-background-50 focus:outline-none'
 						: ''
 				}`}
 				style={{
-					width: width ? `${width}rem` : '100%',
-					padding: padding ? `${padding}` : 'auto',
+					width: width ? `${width}rem` : 'auto',
+					padding: padding ? `${padding}rem` : 'auto',
 				}}
 				isIconOnly={!!icon}
 				disabled={disabled}
@@ -67,3 +77,5 @@ export const ButtonStyled = ({
 		</div>
 	);
 };
+
+ButtonStyled.displayName = 'ButtonStyled';
