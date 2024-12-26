@@ -27,8 +27,8 @@ export const AdvisorCard = () => {
 	const handlePress = () => {
 		serIsliked(!isliked);
 	};
-	// w-[24rem] h-[31.81rem]
 	return (
+		// w-[24rem] h-[31.81rem]
 		<Card
 			className=' border-1  h-[fit-content]  '
 			isPressable
