@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '@nextui-org/button';
 import { Loader } from 'assets';
+import type { JSXElementConstructor, ReactElement } from 'react';
 
 interface ButtonProps {
 	id?: string;
