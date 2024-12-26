@@ -36,7 +36,6 @@ export default function Page() {
 							text='filters'
 						/>
 					</div>
-					<ReviewStar value={2.5} />
 				</div>
 			</main>
 		</div>

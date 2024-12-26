@@ -32,10 +32,6 @@ export default async function RootLayout({
 			>
 				<Navbar title='NextJS Project' />
 				<div className=' flex flex-row'>
-					<div className=' w-20 h-auto px-0.5 pt-10 bg-navbar'>
-						<div>{''}</div>
-					</div>
-
 					<div className='flex-1'>
 						<Providers>{children}</Providers>
 					</div>

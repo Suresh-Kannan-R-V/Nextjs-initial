@@ -6,12 +6,37 @@ interface ButtonProps {
 	id?: string;
 	value: GLfloat;
 	iconSize?: number;
+ 
+	position?: string;
+	top?: number;
+
+	left?: number;
+	right?: number;
+	bottom?: number;
+	zIndex?: number;
+}
+export const RatingChip: React.FC<ButtonProps> = (props) => {
+	const { id, value, iconSize, position, top, left, right, bottom, zIndex } =
+		props;
+ 
 	isIconStart?: boolean;
 }
 export const RatingChip: React.FC<ButtonProps> = (props) => {
 	const { id, value, iconSize, isIconStart } = props;
+ 
 	return (
-		<div className='flex gap-4 items-center' id={id}>
+		<div
+			className={`flex gap-4 items-center ${position}`}
+			id={id}
+			style={{
+				zIndex: zIndex || undefined,
+
+				top: top || undefined,
+				left: left || undefined,
+				right: right || undefined,
+				bottom: bottom || undefined,
+			}}
+		>
 			<Chip
 				color={
 					value >= 4 ? 'success' : props?.value >= 3 ? 'warning' : 'danger'
