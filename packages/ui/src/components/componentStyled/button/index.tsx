@@ -11,7 +11,7 @@ interface ButtonProps {
 	icon?: React.ReactNode;
 	startIcon?: React.ReactNode;
 	endIcon?: React.ReactNode;
-	variant: 'solid' | 'flat' | 'bordered' | 'light';
+	variant?: 'solid' | 'flat' | 'bordered' | 'light';
 	size?: 'sm' | 'md' | 'lg';
 	radius?: 'sm' | 'md' | 'lg' | 'full';
 	color?:
@@ -21,6 +21,7 @@ interface ButtonProps {
 		| 'success'
 		| 'warning'
 		| 'danger';
+	className?: string;
 	disabled?: boolean;
 	loading?: boolean;
 	isExternal?: boolean;
@@ -41,6 +42,7 @@ export const ButtonStyled = ({
 	size = 'md',
 	radius = 'md',
 	color = 'primary',
+	className,
 	disabled = false,
 	loading = false,
 	weight,
@@ -55,13 +57,12 @@ export const ButtonStyled = ({
 				variant={variant}
 				color={color}
 				className={`relative font-medium border-1 ${
-					variant === 'light'
-						? 'border-none hover:bg-background-50 focus:outline-none'
-						: ''
-				}`}
+					variant === 'light' &&
+					'border-none hover:bg-background-50 focus:outline-none'
+				} ${className}`}
 				style={{
-					width: width ? `${width}rem` : 'auto',
-					padding: padding ? `${padding}` : 'auto',
+					width: width && `${width}rem`,
+					padding: padding && padding,
 				}}
 				isIconOnly={!!icon}
 				disabled={disabled}

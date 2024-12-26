@@ -1,14 +1,36 @@
 'use client';
 import { Card, CardBody } from '@nextui-org/react';
-interface namingdata {
+interface NamingData {
 	id?: string;
 	name?: string;
+	position?: 'relative' | 'absolute';
+	zIndex?: number;
+	top?: string;
+	left?: string;
+	right?: string;
+	bottom?: string;
 }
-
-export const Tag: React.FC<namingdata> = ({ name }) => {
+export const Tag: React.FC<NamingData> = ({
+	name,
+	position,
+	zIndex = 10,
+	top,
+	left,
+	right,
+	bottom,
+}) => {
 	return (
-		<Card className=' rounded-borderRadius8px shadow-none border-1  m-1  w-[fit-content]'>
-			<CardBody className='flex justify-center'>
+		<Card
+			className={`rounded-[0.25rem] shadow-none border-1 m-1 w-[fit-content] ${position || 'relative'}`}
+			style={{
+				zIndex,
+				top: top || undefined,
+				left: left || undefined,
+				right: right || undefined,
+				bottom: bottom || undefined,
+			}}
+		>
+			<CardBody className='flex justify-center w-[fit-content] px-2 py-1'>
 				<p className='text-footnote text-foreground-800'>{name}</p>
 			</CardBody>
 		</Card>
