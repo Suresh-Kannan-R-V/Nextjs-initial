@@ -1,5 +1,4 @@
-import { CustomPlanIcon } from '@core/ui/assets';
-import { ButtonStyled } from '@core/ui/components';
+'use client';
 import { Card } from '@nextui-org/react';
 interface cardProps {
 	icon?: React.ReactNode;

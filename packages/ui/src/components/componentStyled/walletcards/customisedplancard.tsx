@@ -1,3 +1,4 @@
+'use client';
 import { CustomPlanIcon } from '@core/ui/assets';
 import { ButtonStyled } from '@core/ui/components';
 import { Card } from '@nextui-org/react';
