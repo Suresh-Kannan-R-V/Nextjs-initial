@@ -8,22 +8,32 @@ interface ButtonProps {
 	iconSize?: number;
 	position?: string;
 	top?: number;
-
 	left?: number;
 	right?: number;
 	bottom?: number;
 	zIndex?: number;
+	isIconStart?: boolean;
 }
 export const RatingChip: React.FC<ButtonProps> = (props) => {
-	const { id, value, iconSize, position, top, left, right, bottom, zIndex } =
-		props;
+	const {
+		id,
+		value,
+		iconSize,
+		position,
+		top,
+		left,
+		right,
+		bottom,
+		zIndex,
+		isIconStart,
+	} = props;
+
 	return (
 		<div
 			className={`flex gap-4 items-center ${position}`}
 			id={id}
 			style={{
 				zIndex: zIndex || undefined,
-
 				top: top || undefined,
 				left: left || undefined,
 				right: right || undefined,
@@ -38,6 +48,7 @@ export const RatingChip: React.FC<ButtonProps> = (props) => {
 				className='rounded'
 			>
 				<div className='flex gap-1 items-center justify-center'>
+					{isIconStart && <StarIcon size={iconSize ?? 16} strokeWidth={0} />}
 					<p className='medium footnote'>
 						{value >= 5
 							? 5
@@ -45,7 +56,7 @@ export const RatingChip: React.FC<ButtonProps> = (props) => {
 								? 0
 								: Number.parseFloat(value.toFixed(1))}
 					</p>
-					<StarIcon size={iconSize ?? 16} strokeWidth={0} />
+					{!isIconStart && <StarIcon size={iconSize ?? 16} strokeWidth={0} />}
 				</div>
 			</Chip>
 		</div>
