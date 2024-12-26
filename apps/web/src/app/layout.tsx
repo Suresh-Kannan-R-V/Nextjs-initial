@@ -1,5 +1,5 @@
 import { Providers } from '@/context';
-import { ButtonStyled, Navbar } from '@core/ui/components';
+import { ButtonStyled, Navbar, SideNavBar } from '@core/ui/components';
 import type { Metadata, Viewport } from 'next';
 import { Manrope } from 'next/font/google';
 import './globals.css';
@@ -30,11 +30,9 @@ export default async function RootLayout({
 			<body
 				className={`${manrope.className} font-semibold text-foreground-900`}
 			>
-				<Navbar title='NextJS Project' />
+				<Navbar />
 				<div className=' flex flex-row'>
-					<div className=' w-20 h-auto px-0.5 pt-10 bg-navbar'>
-						<div>{''}</div>
-					</div>
+					<SideNavBar />
 
 					<div className='flex-1'>
 						<Providers>{children}</Providers>

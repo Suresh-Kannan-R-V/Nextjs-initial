@@ -8,6 +8,7 @@ interface StatusChipProps {
 	status: 'active' | 'in-call' | 'offline';
 	variant?: 'solid';
 	radius?: 'sm' | 'md';
+	weight?: 'medium' | 'bold' | 'semibold' | 'bold' | 'thin';
 }
 
 export const StatusChip = ({
@@ -15,6 +16,7 @@ export const StatusChip = ({
 	status,
 	variant = 'solid',
 	radius = 'sm',
+	weight = 'medium',
 }: StatusChipProps) => {
 	const statusStyles = {
 		active: {
@@ -41,7 +43,7 @@ export const StatusChip = ({
 			variant={variant}
 			className={`px-1 py-1 ${bg} ${text} text-xs font-medium leading-4 text-center`}
 		>
-			{label}
+			<span className={`font-${weight}`}>{label}</span>
 		</Chip>
 	);
 };

@@ -5,7 +5,7 @@ import { Loader } from 'assets';
 interface ButtonProps {
 	id?: string;
 	text?: string;
-	width?: number;
+	width?: string | number;
 	padding?: string;
 	onPress?: () => void;
 	icon?: React.ReactNode;
@@ -25,7 +25,7 @@ interface ButtonProps {
 	disabled?: boolean;
 	loading?: boolean;
 	isExternal?: boolean;
-	weight?: string;
+	weight?: 'regular' | 'medium' | 'semibold' | 'bold';
 	fontsize?: string;
 }
 
@@ -45,7 +45,7 @@ export const ButtonStyled = ({
 	className,
 	disabled = false,
 	loading = false,
-	weight,
+	weight = 'medium',
 	fontsize,
 }: ButtonProps) => {
 	return (
