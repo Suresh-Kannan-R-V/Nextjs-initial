@@ -35,13 +35,13 @@ export const AdvisorCard = () => {
 	// w-[24rem] h-[31.81rem]
 	return (
 		<Card
-			className=' border-1  h-[fit-content] grid  grid-flow-row'
+			className=' border-1  h-[fit-content]  '
 			isPressable
 			style={{}}
 			shadow='none'
 			onPress={() => console.log('item pressed')}
 		>
-			<CardBody className='  p-2 relative     grid-col-12'>
+			<CardBody className='  p-2 relative      '>
 				<Image
 					alt=''
 					className='w-full object-cover h-[200px] rounded-t-borderRadius10px rounded-b-none'
@@ -54,8 +54,8 @@ export const AdvisorCard = () => {
 					name='Top Rated'
 					position='absolute'
 					zIndex={20}
-					top='0.9rem'
-					left='0.9rem'
+					top='0.9'
+					left='0.9'
 				/>
 				<div className='flex items-center justify-between mt-3'>
 					<SpecializedInTag
