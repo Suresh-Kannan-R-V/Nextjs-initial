@@ -6,7 +6,7 @@ export default function Page() {
 		{
 			id: 'overview',
 			label: 'Overview',
-			content: 'Hello world',
+			content: 'hello world',
 		},
 		{
 			id: 'reviews',
