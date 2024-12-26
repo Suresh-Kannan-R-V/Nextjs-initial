@@ -13,7 +13,10 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "../../packages/ui/src/components/componentStyled/walletcards/customisedplancard.tsx",
+    "../../packages/ui/src/components/componentStyled/walletcards/cardlist.tsx",
+    "../../packages/ui/assets/images/bannerobjects.tsx"
   ],
   "exclude": [
     "node_modules",
