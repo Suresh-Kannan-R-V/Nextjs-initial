@@ -33,7 +33,7 @@ export const ConfirmationPopups = ({
 					{
 						<ButtonStyled
 							text={cancelButtonText}
-							onClick={onClickCancelButton}
+							onPress={onClickCancelButton}
 							variant='bordered'
 							size='md'
 						/>
@@ -41,7 +41,7 @@ export const ConfirmationPopups = ({
 					{
 						<ButtonStyled
 							text={acceptButtenText}
-							onClick={onClickAcceptButten}
+							onPress={onClickAcceptButten}
 							variant='solid'
 							size='md'
 						/>
