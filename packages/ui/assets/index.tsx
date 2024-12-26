@@ -15,3 +15,4 @@ export { Experience } from './images/experience';
 export { Role } from './images/role';
 export { RightArrow } from './images/rightArrow';
 export { LanguageIcon } from './images/language';
+export { MailIcon } from './images/mailicon';
