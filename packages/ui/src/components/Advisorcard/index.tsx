@@ -54,8 +54,8 @@ export const AdvisorCard = () => {
 					name='Top Rated'
 					position='absolute'
 					zIndex={20}
-					top='0.9rem'
-					left='0.9rem'
+					top='0.9'
+					left='0.9'
 				/>
 				<div className='flex items-center justify-between mt-3'>
 					<SpecializedInTag
