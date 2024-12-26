@@ -25,7 +25,7 @@ export default function page() {
 	const data = ['Finance Management', 'Credit Advise', 'sdfsdf', 'dsfs'];
 
 	return (
-		<div className='grid m-4'>
+		<div className='grid  grid-flow-row  grid-cols-4 w-[100%] h-[100vh] gap-x-20 gap-y-10 m-10'>
 			{/* <Slotcard
 				day={day}
 				date={date}
@@ -40,6 +40,7 @@ export default function page() {
 			/>
 			<Tag name={name} />
 			<PepoleSpeciality  icon={<Vector  width={10.69} height={15.75} fill=''/>} title={data}/> */}
+			<AdvisorCard />
 			<AdvisorCard />
 		</div>
 	);

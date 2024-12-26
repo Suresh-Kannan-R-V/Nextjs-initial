@@ -17,9 +17,9 @@ export const PepoleSpeciality: React.FC<props> = ({ icon, title }) => {
 	));
 
 	return (
-		<div className='flex  w-[fit-content] items-center  '>
+		<div className='flex  w-[fit-content] items-center    '>
 			{icon}{' '}
-			<span className='flex pl-2 text-body2 font-regular text-foreground-800'>
+			<span className='flex pl-2 text-body2 font-regular text-foreground-800 whitespace-nowrap'>
 				{content?.length === 0 ? 'null' : content}{' '}
 				{remainingContent !== 0 && (
 					<p className='pl-1 text-body2 font-medium text-primary-900'>

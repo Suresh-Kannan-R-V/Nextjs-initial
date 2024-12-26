@@ -32,15 +32,16 @@ export const AdvisorCard = () => {
 	const handlePress = () => {
 		serIsliked(!isliked);
 	};
-
+	// w-[24rem] h-[31.81rem]
 	return (
 		<Card
-			className='w-[24rem] h-[31.81rem] border-1'
+			className=' border-1  h-[fit-content] grid  grid-flow-row'
 			isPressable
+			style={{}}
 			shadow='none'
 			onPress={() => console.log('item pressed')}
 		>
-			<CardBody className='overflow-visible p-2 relative'>
+			<CardBody className='  p-2 relative     grid-col-12'>
 				<Image
 					alt=''
 					className='w-full object-cover h-[200px] rounded-t-borderRadius10px rounded-b-none'
@@ -75,7 +76,7 @@ export const AdvisorCard = () => {
 					</p>
 				</div>
 				<hr className='mt-4 mb-3' />
-				<div className='flex flex-col gap-2 mt-2'>
+				<div className='flex flex-col gap-2 mt-2  '>
 					<PepoleSpeciality
 						icon={<Vector width={10.69} height={15.75} fill='555555' />}
 						title={data}
