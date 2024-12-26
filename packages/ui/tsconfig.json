@@ -2,7 +2,7 @@
   "extends": "@core/typescript-config/base.json",
   "include": [
     "**/*.ts",
-    "**/*.tsx",
+    "**/*.tsx", "../../apps/web/src/app/wallet/components/bannerobjects.tsx",
   ],
   "exclude": [
     "node_modules",

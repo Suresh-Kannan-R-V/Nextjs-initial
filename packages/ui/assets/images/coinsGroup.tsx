@@ -9,7 +9,7 @@ export const CoinsGroup = (props: SVGProps<SVGSVGElement>) => (
 		{...props}
 	>
 		{' '}
-		<title>coins group</title>
+		<title> </title>
 		<path
 			opacity={0.12}
 			d='M78.226 105.827c43.204 0 78.227-3.028 78.227-6.764s-35.023-6.764-78.227-6.764C35.023 92.299 0 95.327 0 99.063s35.023 6.764 78.226 6.764Z'

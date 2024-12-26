@@ -11,5 +11,6 @@ export { FilterIcon } from './images/filter';
 export { SpecializedInIcon } from './specializedInIcon';
 export { Experience } from './images/experience';
 export { Role } from './images/role';
-export { RightArrow } from './images/rightArrow';
 export { CoinsGroup } from './images/coinsGroup';
+export { LayerIcon } from './images/layers';
+export { CustomPlanIcon } from './images/customplan';
