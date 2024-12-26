@@ -40,14 +40,14 @@ export const ArrowTitle: React.FC<ArrowTitleProps> = (props) => {
 					</span>
 					<span>
 						<ForwardArrowIcon
-							isdisabled={end >= data.length}
+							isdisabled={end >= data?.length}
 							onClick={handleNext}
 						/>
 					</span>
 				</span>
 			</span>
 			<div className='data-list flex justify-around'>
-				{data.slice(start, end).map((item, index) => (
+				{data?.slice(start, end)?.map((item, index) => (
 					<div key={index} className='data-item'>
 						{item}
 					</div>
