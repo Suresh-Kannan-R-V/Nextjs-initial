@@ -15,6 +15,7 @@ interface ButtonProps {
 	isIconOnly?: boolean;
 	isBackground?: boolean;
 	isCirclular?: boolean;
+	isCustomized?: boolean;
 	variant?:
 		| 'light'
 		| 'solid'
@@ -38,6 +39,7 @@ export const IconButton: React.FC<ButtonProps> = (props) => {
 		iconName,
 		text,
 		size,
+		isCustomized,
 	} = props;
 	return (
 		<div className='flex gap-4 items-center' id={id}>
@@ -47,15 +49,17 @@ export const IconButton: React.FC<ButtonProps> = (props) => {
 				onPress={onPress}
 				color={color}
 				className={
-					isBackground === false
-						? 'bg-transparent border-none rounded-full'
-						: isIconOnly && isCirclular
-							? 'rounded-full '
-							: isIconOnly
-								? 'rounded-borderRadius10px border-foreground-500'
-								: color === 'default'
-									? 'border-foreground-500 rounded-borderRadius10px'
-									: 'rounded-borderRadius10px'
+					isCustomized
+						? 'border-none bg-[#FFF4E5] rounded-lg'
+						: isBackground === false
+							? 'bg-transparent border-none rounded-full'
+							: isIconOnly && isCirclular
+								? 'rounded-full '
+								: isIconOnly
+									? 'rounded-borderRadius10px border-foreground-500'
+									: color === 'default'
+										? 'border-foreground-500 rounded-borderRadius10px'
+										: 'rounded-borderRadius10px'
 				}
 				size={size}
 			>

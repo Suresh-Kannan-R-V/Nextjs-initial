@@ -159,7 +159,9 @@ export default {
 						primary: {
 							...colors.blue,
 							'50': '#F7F9FF',
+							'200': '#DFF0F7',
 							'500': '#5978FF',
+							'800': '#077FB2',
 							'900': '#0D1226',
 							foreground: '#fff',
 							DEFAULT: '#5978FF',
@@ -182,6 +184,7 @@ export default {
 						success: {
 							...colors.emerald,
 							foreground: '#fff',
+							'100': '#CBF2E0',
 							'900': '#008545',
 							DEFAULT: colors.emerald[600],
 						},
