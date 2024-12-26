@@ -10,7 +10,7 @@ interface IconProps extends React.SVGProps<SVGSVGElement> {
 	strokeWidth?: number;
 }
 
-export const SortIcon: React.FC<IconProps> = ({
+export const SortIcon = ({
 	fill,
 	filled = false,
 	size,
@@ -19,7 +19,7 @@ export const SortIcon: React.FC<IconProps> = ({
 	stroke,
 	strokeWidth,
 	...props
-}) => {
+}: IconProps) => {
 	return (
 		<svg
 			width={size ?? width ?? 16}
