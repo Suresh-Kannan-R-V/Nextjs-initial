@@ -25,8 +25,9 @@ export default function Page() {
 	];
 
 	return (
-		<div className='flex flex-col min-h-screen bg-[#F7F9FF] mx-auto'>
+		<div className='flex flex-col min-h-screen bg-[#F7F9FF] gap-4'>
 			<RatingChip value={4} />
+			<RatingChip value={3} isIconStart />
 			<IconButton
 				isIconOnly={true}
 				iconName={<SortIcon fill='warning' />}
