@@ -61,7 +61,7 @@ export const ButtonStyled = ({
 				}`}
 				style={{
 					width: width ? `${width}rem` : 'auto',
-					padding: padding ? `${padding}` : 'auto',
+					padding: padding ? `${padding}rem` : 'auto',
 				}}
 				isIconOnly={!!icon}
 				disabled={disabled}
