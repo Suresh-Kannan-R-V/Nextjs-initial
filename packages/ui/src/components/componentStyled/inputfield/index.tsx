@@ -5,13 +5,19 @@ interface TextareaProps {
 	id: string;
 	description: string;
 	isRequired: boolean;
+	onchange: (value: string) => void;
 }
-export const Inputfield = ({ id, description, isRequired }: TextareaProps) => {
+export const Inputfield = ({
+	id,
+	description,
+	isRequired,
+	onchange,
+}: TextareaProps) => {
 	const [value, setValue] = useState('');
-
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setValue(e.target.value);
-		console.log(e.target.value);
+		const newvalue = e.target.value;
+		setValue(newvalue);
+		onchange(newvalue);
 	};
 	return (
 		<div id={id}>

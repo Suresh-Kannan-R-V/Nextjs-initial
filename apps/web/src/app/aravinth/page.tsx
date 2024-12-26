@@ -1,16 +1,7 @@
 'use client';
-import {
-	ButtonStyled,
-	Inputfield,
-	Logo,
-	Selectfield,
-	VideoCard,
-} from '@core/ui/components';
-import { Button } from '@nextui-org/button';
-import { Dropdown } from '@nextui-org/react';
-import Link from 'next/link';
+import { Inputfield, Selectfield, VideoCard } from '@core/ui/components';
 import { useState } from 'react';
-import { Logoimg, Thumbnailimg } from '../../../../../packages/ui/assets';
+import { Thumbnailimg } from '../../../../../packages/ui/assets';
 
 type LabelData = {
 	label: string;
@@ -23,6 +14,17 @@ export default function Page() {
 		values: ['Dog', 'Cat', 'Bird'],
 	};
 
+	const [value, setvalue] = useState('');
+	const [option, setoption] = useState('');
+	const handleChange = (newValue: string) => {
+		setvalue(newValue);
+		console.log(newValue);
+	};
+	const handleselect = (newvalue: string) => {
+		setoption(newvalue);
+		console.log(newvalue);
+	};
+
 	return (
 		<div className='flex flex-col gap-10 justify-center items-center h-screen mx-auto'>
 			<div className='flex gap-5 flex-row'>
@@ -30,6 +32,7 @@ export default function Page() {
 					id='textfield'
 					description='Brief Description of the Query'
 					isRequired={true}
+					onchange={handleChange}
 				/>
 			</div>
 
@@ -41,6 +44,7 @@ export default function Page() {
 					placeholder='hii'
 					clearable={false}
 					isRequired={true}
+					onchange={handleselect}
 				/>
 			</div>
 			<div>

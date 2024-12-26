@@ -5,7 +5,6 @@ import {
 	AutocompleteSection,
 } from '@nextui-org/react';
 import { Dropdown } from 'assets';
-import { div } from 'framer-motion/client';
 import { useState } from 'react';
 interface SelectfieldProps {
 	id: string;
@@ -14,6 +13,7 @@ interface SelectfieldProps {
 	placeholder: string;
 	clearable: boolean;
 	isRequired: boolean;
+	onchange: (key: string) => void;
 }
 export const Selectfield = ({
 	id,
@@ -22,6 +22,7 @@ export const Selectfield = ({
 	placeholder,
 	clearable,
 	isRequired,
+	onchange,
 }: SelectfieldProps) => {
 	const [selectedValue, setSelectedValue] = useState<
 		string | number | readonly string[] | undefined
@@ -30,7 +31,7 @@ export const Selectfield = ({
 	const handleSelectionChange = (key: string | number | null) => {
 		const values = String(key);
 		setSelectedValue(values);
-		console.log('Selected Value:', values);
+		onchange(values);
 	};
 	return (
 		<div id={id}>

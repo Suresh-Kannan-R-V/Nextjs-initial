@@ -1,5 +1,5 @@
 'use client';
-import { Button, Card, CardBody } from '@nextui-org/react';
+
 import { Play } from 'assets';
 import { useState } from 'react';
 
