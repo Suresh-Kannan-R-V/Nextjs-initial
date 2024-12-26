@@ -29,3 +29,4 @@ export const ReviewStar = ({ id, value = 0 }: ReviewStarProps) => {
 		</div>
 	);
 };
+ReviewStar.displayName = 'ReviewStar';

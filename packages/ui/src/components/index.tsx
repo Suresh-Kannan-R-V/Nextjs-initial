@@ -1,8 +1,11 @@
 export { Navbar } from './layout/navbar';
+export { StatusChip } from './componentStyled/statusButton';
+export { SearchBar } from './componentStyled/SearchBar';
 export { Logo } from './componentStyled/logo';
 export { ButtonStyled } from './componentStyled/button';
 export { ConfirmationPopups } from './componentStyled/confirmationPopups';
 export { BreadCrums } from './componentStyled/breadCrums';
+export { SpecializedInTag } from './componentStyled/specializedInTag';
 export { InfoCard } from './componentStyled/infobox';
 export { Slotcard } from './componentStyled/slotcard';
 export { Tag } from './componentStyled/namingtag';
@@ -14,3 +17,4 @@ export { Inputfield } from './componentStyled/inputfield';
 export { Selectfield } from './componentStyled/selectfield';
 export { VideoCard } from './componentStyled/videocard';
 export * from './componentStyled';
+export { TabBar } from './componentStyled/TabBar';
