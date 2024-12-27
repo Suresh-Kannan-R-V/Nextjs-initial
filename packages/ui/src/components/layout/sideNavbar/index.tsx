@@ -9,7 +9,7 @@ export const SideNavBar = ({ id }: { id?: string }) => {
 	return (
 		<div
 			id={id}
-			className='h-screen px-0.5 pt-12 bg-navbar flex flex-col gap-6 sticky top-16 left-0'
+			className='h-[91vh] px-0.5 pt-12 bg-navbar flex flex-col gap-6 sticky top-16'
 		>
 			<NavButton
 				icon={<Exploreimg width={24} height={24} />}
