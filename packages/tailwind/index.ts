@@ -10,6 +10,25 @@ export default {
 	],
 	theme: {
 		extend: {
+			colors: {
+				status: {
+					statusColor: {
+						active: '#CBF2E0',
+						inCall: '#FFDAD3',
+						offline: '#E6E8E9',
+					},
+					textColor: {
+						active: '#008545',
+						inCall: '#DF3813',
+						offline: '#4E585E',
+					},
+				},
+				navbar: {
+					...colors.slate,
+					foreground: '#fff',
+					DEFAULT: '#F7F7F7',
+				},
+			},
 			animation: {
 				popIn: 'appearance-in 300ms ease-out normal both',
 				popOut: 'appearance-out 60ms ease-in normal both',
@@ -49,7 +68,7 @@ export default {
 				},
 			},
 			fontFamily: {
-				sans: ["'Manrope Variable', sans-serif"],
+				ssans: ["'Manrope Variable', sans-serif"],
 			},
 			fontWeight: {
 				regular: '400',
@@ -69,6 +88,7 @@ export default {
 				footnote: ['0.75rem', { lineHeight: '1rem', letterSpacing: '0%' }],
 			},
 			borderRadius: {
+				borderRadius4px: '0.25rem',
 				borderRadius8px: '0.5rem',
 				borderRadius12px: '0.75rem',
 				borderRadius16px: '1rem',
@@ -152,6 +172,8 @@ export default {
 						secondary: {
 							...colors.orange,
 							'50': '#FFF4E5',
+							'100': '#F8F8F83D',
+							'200': '#F8971F1F',
 							'500': '#F8971F',
 							'900': '#402708',
 							foreground: '#fff',
@@ -160,6 +182,7 @@ export default {
 						success: {
 							...colors.emerald,
 							foreground: '#fff',
+							'900': '#008545',
 							DEFAULT: colors.emerald[600],
 						},
 						warning: {
