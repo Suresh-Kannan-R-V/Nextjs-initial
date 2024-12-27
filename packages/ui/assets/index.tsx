@@ -19,7 +19,7 @@ export { Experience } from './images/experience';
 export { Role } from './images/role';
 export { LanguageIcon } from './images/language';
 export { MailIcon } from './images/mailicon';
-export { RightArrow } from './images/rightarrow';
+export { RightArrow } from './images/rightArrow';
 export { Linkedin } from './images/linkedin';
 export { Twitter } from './images/x';
 export { Facebook } from './images/facebook'; //
