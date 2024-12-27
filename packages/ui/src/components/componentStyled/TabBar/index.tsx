@@ -1,14 +1,13 @@
 'use client';
 
-import { Card, CardBody, Chip, Tab, Tabs } from '@nextui-org/react';
-import type React from 'react';
+import { Chip, Tab, Tabs } from '@nextui-org/react';
 
 interface TabBarProps {
 	id?: string;
 	tabs: {
 		id: string;
 		label: string;
-		content: string;
+		content: React.ReactNode;
 		count?: number;
 	}[];
 	width?: number;
@@ -41,31 +40,31 @@ export const TabBar = ({
 					cursor: 'w-full bg-primary',
 					tab: 'max-w-fit px-0 h-12',
 					tabContent: `text-foreground-800 font-regular group-data-[selected=true]:text-primary group-data-[selected=true]:font-medium
-                  `,
+				    `,
 				}}
 				color={color}
 				variant={variant}
 				items={tabs}
 			>
-				{(item) => (
+				{tabs?.map((tab, index) => (
 					<Tab
-						key={item.id}
+						key={tab?.id}
 						title={
 							<div className='flex items-center space-x-2'>
-								<span>{item.label}</span>
-								{item.count !== undefined && item.count > 0 && (
+								<span>{tab.label}</span>
+								{tab.count !== undefined && tab.count > 0 && (
 									<Chip size='sm' color='danger'>
-										{item.count}
+										{tab?.count}
 									</Chip>
 								)}
 							</div>
 						}
 					>
-						<Card>
-							<CardBody>{item.content}</CardBody>
-						</Card>
+						<div>
+							<div>{tab?.content}</div>
+						</div>
 					</Tab>
-				)}
+				))}
 			</Tabs>
 		</div>
 	);
