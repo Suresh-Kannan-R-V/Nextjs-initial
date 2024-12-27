@@ -18,18 +18,18 @@ import { Card, CardBody, Image } from '@nextui-org/react';
 import { useState } from 'react';
 type Status = 'active' | 'in-call' | 'offline';
 interface Props {
-	id: number;
-	name: string;
-	status: Status;
-	work_experience: number;
-	rating: number;
-	recommended: string;
-	calls_attended: number;
-	skill_sets: Array<string>;
-	known_languages: Array<string>;
-	is_discounted: boolean;
-	discounted_credicts: number;
-	credicts: number;
+	id?: number;
+	name?: string;
+	status?: Status;
+	work_experience?: number;
+	rating?: number;
+	recommended?: string;
+	calls_attended?: number;
+	skill_sets?: Array<string>;
+	known_languages?: Array<string>;
+	is_discounted?: boolean;
+	discounted_credicts?: number;
+	credicts?: number;
 }
 
 export const AdvisorCard: React.FC<Props> = ({

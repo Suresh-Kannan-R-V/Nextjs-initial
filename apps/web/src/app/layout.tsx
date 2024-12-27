@@ -30,7 +30,6 @@ export default async function RootLayout({
 			<body
 				className={`${manrope.className} font-semibold text-foreground-900`}
 			>
-				<Navbar title='NextJS Project' />
 				<div className=' flex flex-row'>
 					<div className='flex-1'>
 						<Providers>{children}</Providers>
