@@ -89,7 +89,10 @@ export default {
 			},
 			borderRadius: {
 				borderRadius4px: '0.25rem',
+				borderRadius7px: '0.45rem',
+
 				borderRadius8px: '0.5rem',
+				borderRadius10px: '0.625rem',
 				borderRadius12px: '0.75rem',
 				borderRadius16px: '1rem',
 				borderRadius20px: '1.25rem',
@@ -115,6 +118,12 @@ export default {
 							...colors.slate,
 							DEFAULT: colors.slate[100],
 							foreground: colors.slate[900],
+						},
+						content1: {
+							'50': '#FFE6DA',
+							'100': '#fbe4c9',
+							'200': '#DBF6FC',
+							'300': '#d6dcfa',
 						},
 						content4: {
 							...colors.slate,

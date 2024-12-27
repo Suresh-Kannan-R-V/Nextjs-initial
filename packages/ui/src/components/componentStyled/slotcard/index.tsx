@@ -23,8 +23,8 @@ export const Slotcard: React.FC<SlotcardProps> = ({
 	return (
 		<Card
 			className={`
-        ${is_time ? 'grid' : 'grid'} 
-        bg-background-50 flex items-center justify-center rounded-borderRadius12px border-1 shadow-none   m-2
+        ${is_time ? 'py-4 grid' : 'grid '} 
+        bg-background-50 flex items-center justify-center rounded-borderRadius12px border-1 shadow-none p-3
       `}
 		>
 			<CardHeader className='flex flex-col space-y-1 text-foreground-800 '>

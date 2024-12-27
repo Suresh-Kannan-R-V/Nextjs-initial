@@ -30,7 +30,7 @@ export const ArrowTitle: React.FC<ArrowTitleProps> = (props) => {
 
 	return (
 		<div>
-			<span className='flex items-center justify-between'>
+			<span className='flex items-center justify-between mb-4'>
 				<span className='regular text-body2 font-popIns text-foreground-900'>
 					{title}
 				</span>
@@ -46,7 +46,7 @@ export const ArrowTitle: React.FC<ArrowTitleProps> = (props) => {
 					</span>
 				</span>
 			</span>
-			<div className='data-list flex justify-around'>
+			<div className='data-list flex justify-between'>
 				{data?.slice(start, end)?.map((item, index) => (
 					<div key={index} className='data-item'>
 						{item}

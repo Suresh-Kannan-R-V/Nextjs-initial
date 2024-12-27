@@ -26,7 +26,7 @@ export const BreadCrums = ({ text, name, path }: BreadCrumsProps) => {
 
 	return (
 		<div
-			className='bg-background h-[fit-content] font-medium text-body1 flex items-center justify-center gap-1 text-background-900 cursor-pointer'
+			className='h-[fit-content] font-medium text-body1 flex items-center  gap-1 text-background-900 cursor-pointer'
 			onClick={handleNavigate}
 			onKeyDown={handleKeyDown}
 		>

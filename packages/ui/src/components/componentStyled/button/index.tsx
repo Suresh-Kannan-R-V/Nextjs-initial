@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '@nextui-org/button';
 import { Loader } from 'assets';
+import type { JSXElementConstructor, ReactElement } from 'react';
 
 interface ButtonProps {
 	id?: string;
@@ -61,7 +62,7 @@ export const ButtonStyled = ({
 				}`}
 				style={{
 					width: width ? `${width}rem` : 'auto',
-					padding: padding ? `${padding}` : 'auto',
+					padding: padding ? `${padding}rem` : 'auto',
 				}}
 				isIconOnly={!!icon}
 				disabled={disabled}

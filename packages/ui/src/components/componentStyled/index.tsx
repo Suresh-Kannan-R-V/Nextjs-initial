@@ -7,3 +7,6 @@ export { Selectfield } from './selectfield';
 export { VideoCard } from './videocard';
 export { ArrowTitle } from './arrowtitle';
 export { Cards } from './Cards';
+export { Tag } from './namingtag';
+export { SpecializedInTag } from './specializedInTag';
+export { StatusChip } from './statusButton';

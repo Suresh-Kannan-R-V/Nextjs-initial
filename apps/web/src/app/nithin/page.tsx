@@ -66,7 +66,7 @@ export default function Page() {
 	];
 
 	return (
-		<div className='max-w-xl'>
+		<div>
 			<ArrowTitle
 				title='Available Slots'
 				data={card1.map((Data) => (

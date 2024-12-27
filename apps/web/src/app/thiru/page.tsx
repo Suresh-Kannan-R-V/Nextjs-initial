@@ -8,9 +8,9 @@ import { Creditsimg } from '../../../../../packages/ui/assets';
 
 export default function page() {
 	const breadCrumsData = [
-		{ text: "Explore RIA's", name: 'Nancy John Sarikha', path: '/' },
-		{ text: 'View Project', name: 'John Doe', path: '/magesh' },
-		{ text: 'Edit Profile', name: 'Jane Smith', path: '/suresh' },
+		{ id: 1, text: "Explore RIA's", name: 'Nancy John Sarikha', path: '/' },
+		{ id: 1, text: 'View Project', name: 'John Doe', path: '/magesh' },
+		{ id: 1, text: 'Edit Profile', name: 'Jane Smith', path: '/suresh' },
 	];
 	return (
 		<div className='bg-slate-400 flex flex-col h-screen justify-around items-center '>
@@ -31,7 +31,7 @@ export default function page() {
 			/>
 			{breadCrumsData.map((crumb, index) => (
 				<BreadCrums
-					key={index}
+					key={crumb.id}
 					text={crumb.text}
 					name={crumb.name}
 					path={crumb.path}
