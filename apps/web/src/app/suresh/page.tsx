@@ -11,7 +11,7 @@ export default function Page() {
 		<div className='flex flex-col gap-0 justify-center align-middle h-screen mx-auto'>
 			<div className='flex gap-0 flex-col'>
 				<ButtonStyled text='hello' variant='bordered' loading width={8} />
-				<RatingRange value='5' range='20' />
+				<RatingRange value={5} range={30} />
 				<ReviewStar value={2} />
 				<ReviewCard
 					rating={3.5}

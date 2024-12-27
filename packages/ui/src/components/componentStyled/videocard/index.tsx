@@ -7,6 +7,7 @@ interface VideoCardProps {
 	id: string;
 	SvgComponent: React.ReactNode;
 	videoTiming: number;
+	description: string;
 }
 const formatToMinutesSeconds = (totalSeconds: number): string => {
 	const minutes = Math.floor(totalSeconds / 60);
@@ -14,7 +15,12 @@ const formatToMinutesSeconds = (totalSeconds: number): string => {
 	return `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 };
 
-export function VideoCard({ id, SvgComponent, videoTiming }: VideoCardProps) {
+export function VideoCard({
+	id,
+	SvgComponent,
+	videoTiming,
+	description,
+}: VideoCardProps) {
 	const [showPopup, setShowPopup] = useState(false);
 
 	const handleClick = (e?: React.MouseEvent<HTMLDivElement>) => {
@@ -34,9 +40,9 @@ export function VideoCard({ id, SvgComponent, videoTiming }: VideoCardProps) {
 					}
 				}}
 			>
-				<div className='p-0'>
+				<div className='p-0 mt-5 relative'>
 					<div>{SvgComponent}</div>
-					<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-2 text-white text-regular'>
+					<div className='absolute bottom-[70px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center gap-2 text-white text-regular'>
 						<div className='w-6 h-6 flex items-center justify-center bg-blue-500 rounded-full'>
 							<Play />
 						</div>
@@ -45,6 +51,9 @@ export function VideoCard({ id, SvgComponent, videoTiming }: VideoCardProps) {
 					<span className='absolute bottom-2 right-2 bg-white bg-opacity-70 text-black text-xs font-bold px-2 py-1 rounded-md'>
 						{formatToMinutesSeconds(videoTiming)}
 					</span>
+				</div>
+				<div className='font-medium text-body2 max-w-xs mt-3'>
+					{description}
 				</div>
 			</div>
 		</>

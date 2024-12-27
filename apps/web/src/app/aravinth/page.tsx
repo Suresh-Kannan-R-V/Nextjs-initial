@@ -7,6 +7,12 @@ type LabelData = {
 	label: string;
 	values: string[];
 };
+type VideoData = {
+	id: string;
+	image: JSX.Element;
+	videoTiming: number;
+	description: string;
+};
 
 export default function Page() {
 	const labelData: LabelData = {
@@ -24,6 +30,21 @@ export default function Page() {
 		setoption(newvalue);
 		console.log(newvalue);
 	};
+	const videoData: VideoData[] = [
+		{
+			id: 'image1',
+			image: <Thumbnailimg />,
+			videoTiming: 321,
+			description:
+				'A Quick intro about me and my experience on finance background',
+		},
+		{
+			id: 'image2',
+			image: <Thumbnailimg />,
+			videoTiming: 215,
+			description: 'Journey on credit and  finance manage',
+		},
+	];
 
 	return (
 		<div className='flex flex-col gap-10 justify-center items-center h-screen mx-auto'>
@@ -48,11 +69,15 @@ export default function Page() {
 				/>
 			</div>
 			<div>
-				<VideoCard
-					id='videocard'
-					SvgComponent={<Thumbnailimg />}
-					videoTiming={321}
-				/>
+				{videoData.map((video, index) => (
+					<VideoCard
+						key={video.id}
+						id={video.id}
+						SvgComponent={video.image}
+						videoTiming={video.videoTiming}
+						description={video.description}
+					/>
+				))}
 			</div>
 		</div>
 	);

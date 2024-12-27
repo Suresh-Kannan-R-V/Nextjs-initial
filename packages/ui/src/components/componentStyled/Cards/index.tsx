@@ -24,7 +24,7 @@ export const Cards = ({
 	id,
 }: CardItemProps) => {
 	return (
-		<Card className=' rounded-[0.75rem] border-none shadow-none' id={id}>
+		<Card className=' rounded-[0.75rem] border shadow-none' id={id}>
 			<CardBody className=' p-2'>
 				<Image
 					alt={`${name}'s image`}
