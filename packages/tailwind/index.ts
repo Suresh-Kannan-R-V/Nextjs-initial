@@ -117,6 +117,7 @@ export default {
 						default: {
 							...colors.slate,
 							DEFAULT: colors.slate[100],
+							'100': '#383E54',
 							foreground: colors.slate[900],
 						},
 						content4: {
@@ -162,6 +163,7 @@ export default {
 						primary: {
 							...colors.blue,
 							'50': '#F7F9FF',
+							'100': '#EBEEFF',
 							'200': '#DFF0F7',
 							'500': '#5978FF',
 							'800': '#077FB2',

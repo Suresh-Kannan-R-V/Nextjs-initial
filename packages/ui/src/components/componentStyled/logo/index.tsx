@@ -4,7 +4,7 @@ export const Logo = ({
 	id,
 	image,
 	Title,
-}: { id?: string; image?: React.ReactNode; Title: string }) => {
+}: { id?: string; image?: React.ReactNode; Title?: string }) => {
 	return (
 		<div className='flex items-center space-x-2' id={id}>
 			{/* Image container */}

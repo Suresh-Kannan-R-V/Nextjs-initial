@@ -1,5 +1,4 @@
 export const Play = () => (
-	// biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
 	<svg
 		width='16'
 		height='16'
