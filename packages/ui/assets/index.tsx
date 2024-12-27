@@ -20,3 +20,5 @@ export { Role } from './images/role';
 export { LanguageIcon } from './images/language';
 export { MailIcon } from './images/mailicon';
 export { RightArrow } from './images/rightarrow';
+export { AttendedCallIcon } from './images/attendedCallIcon';
+export { CallDurationIcon } from './images/callDurationIcon';

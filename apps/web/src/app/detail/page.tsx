@@ -1,7 +1,9 @@
 'use client';
 
 import { BreadCrums } from '@core/ui/components';
+import OverallStats from './components/overallStats';
 import Profile from './components/profile';
+import SheduleCall from './components/scheduleCall';
 
 export default function page() {
 	const breadCrumsData = [
@@ -24,9 +26,9 @@ export default function page() {
 					<Profile />
 					overview / Reviews & Ratings
 				</div>
-				<div className='bg-red-300 col-span-2'>
-					<div>Overall Stats of Nancy</div>
-					<div>Schedule Call</div>
+				<div className='col-span-2 flex flex-col gap-4'>
+					<OverallStats />
+					<SheduleCall />
 				</div>
 			</div>
 		</div>
