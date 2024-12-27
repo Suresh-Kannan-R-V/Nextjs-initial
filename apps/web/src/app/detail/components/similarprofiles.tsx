@@ -1,4 +1,3 @@
-'use client';
 import { ArrowTitle, Cards } from '@core/ui/components';
 
 export default function Page() {
