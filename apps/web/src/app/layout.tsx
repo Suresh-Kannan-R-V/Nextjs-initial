@@ -27,13 +27,10 @@ export default async function RootLayout({
 }: { children: React.ReactNode }) {
 	return (
 		<html lang='en'>
-			<body
-				className={`${manrope.className} font-semibold text-foreground-900`}
-			>
+			<body className={`${manrope.className} font-medium text-foreground-900`}>
 				<Navbar />
 				<div className=' flex flex-row'>
 					<SideNavBar />
-
 					<div className='flex-1'>
 						<Providers>{children}</Providers>
 					</div>

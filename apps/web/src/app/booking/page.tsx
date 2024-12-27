@@ -29,6 +29,66 @@ export default function Page() {
 			image:
 				'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
 		},
+		{
+			id: 2,
+			name: 'John Doe',
+			startTime: '2024-12-28T11:00:00Z',
+			endTime: '2024-12-28T11:30:00Z',
+			status: true,
+			details: 'Market Analysis Discussion',
+			image:
+				'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+		},
+		{
+			id: 2,
+			name: 'John Doe',
+			startTime: '2024-12-28T11:00:00Z',
+			endTime: '2024-12-28T11:30:00Z',
+			status: true,
+			details: 'Market Analysis Discussion',
+			image:
+				'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+		},
+		{
+			id: 2,
+			name: 'John Doe',
+			startTime: '2024-12-28T11:00:00Z',
+			endTime: '2024-12-28T11:30:00Z',
+			status: true,
+			details: 'Market Analysis Discussion',
+			image:
+				'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+		},
+		{
+			id: 2,
+			name: 'John Doe',
+			startTime: '2024-12-28T11:00:00Z',
+			endTime: '2024-12-28T11:30:00Z',
+			status: true,
+			details: 'Market Analysis Discussion',
+			image:
+				'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+		},
+		{
+			id: 2,
+			name: 'John Doe',
+			startTime: '2024-12-28T11:00:00Z',
+			endTime: '2024-12-28T11:30:00Z',
+			status: true,
+			details: 'Market Analysis Discussion',
+			image:
+				'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+		},
+		{
+			id: 2,
+			name: 'John Doe',
+			startTime: '2024-12-28T11:00:00Z',
+			endTime: '2024-12-28T11:30:00Z',
+			status: true,
+			details: 'Market Analysis Discussion',
+			image:
+				'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
+		},
 	];
 	const completedCallsData = [
 		{

@@ -67,9 +67,7 @@ export function UpcomingCalls({ upComingCallData }: upComingCallDataProps) {
 								className='w-full object-cover h-full rounded-xl bg-background-300'
 							/>
 						</div>
-						<div
-							className={`${CallData.status ? 'text-red-500' : 'text-[#383E54]'}`}
-						>
+						<div>
 							<Tag
 								name={TimeCalculation({
 									status: CallData.status,
@@ -111,13 +109,13 @@ export function UpcomingCalls({ upComingCallData }: upComingCallDataProps) {
 							<ButtonStyled
 								variant='bordered'
 								text='Cancel Call'
-								width={11}
+								width={10}
 								weight='medium'
 							/>
 							<ButtonStyled
 								variant='solid'
 								text='Join Call'
-								width={11}
+								width={10}
 								weight='medium'
 							/>
 						</div>

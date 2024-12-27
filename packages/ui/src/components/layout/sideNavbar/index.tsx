@@ -3,11 +3,14 @@ import { NavButton } from '@components/componentStyled/navButton';
 import { Bookingimg, Exploreimg, Messageimg, Walletimg } from 'assets';
 import { usePathname } from 'next/navigation';
 
-export const SideNavBar = () => {
+export const SideNavBar = ({ id }: { id?: string }) => {
 	const pathname = usePathname();
 
 	return (
-		<div className='h-screen px-0.5 pt-12 bg-navbar flex flex-col gap-6'>
+		<div
+			id={id}
+			className='h-screen px-0.5 pt-12 bg-navbar flex flex-col gap-6 sticky top-16 left-0'
+		>
 			<NavButton
 				icon={<Exploreimg width={24} height={24} />}
 				label='Explore'
