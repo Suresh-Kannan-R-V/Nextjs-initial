@@ -39,7 +39,7 @@ export default function Profile() {
 	];
 	return (
 		<div>
-			<div className='bg-gradient-to-r from-content1 to-content1-100 h-[8.75rem] pl-6 pt-10 rounded-tr-borderRadius12px rounded-tl-borderRadius12px'>
+			<div className='bg-gradient-to-r from-content1-300 to-content1-100 h-[8.75rem] pl-6 pt-10 rounded-tr-borderRadius12px rounded-tl-borderRadius12px'>
 				<div className='relative'>
 					<Image
 						alt='NextUI hero Image'

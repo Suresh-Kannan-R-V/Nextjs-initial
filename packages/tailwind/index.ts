@@ -120,10 +120,10 @@ export default {
 							foreground: colors.slate[900],
 						},
 						content1: {
-							DEFAULT: '#d6dcfa',
 							'50': '#FFE6DA',
 							'100': '#fbe4c9',
 							'200': '#DBF6FC',
+							'300': '#d6dcfa',
 						},
 						content4: {
 							...colors.slate,
