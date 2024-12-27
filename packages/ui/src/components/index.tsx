@@ -19,3 +19,4 @@ export { VideoCard } from './componentStyled/videocard';
 export { AdvisorCard } from './Advisorcard';
 export * from './componentStyled';
 export { TabBar } from './componentStyled/TabBar';
+export { OverallStatsComponent } from './componentStyled/overallStatsComponent';

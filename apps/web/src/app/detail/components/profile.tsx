@@ -39,13 +39,14 @@ export default function Profile() {
 	];
 	return (
 		<div>
-			<div className='bg-gradient-to-r from-[#d6dcfa] to-[#fbe4c9] h-[8.75rem] pl-6 pt-10 rounded-tr-borderRadius12px rounded-tl-borderRadius12px'>
+			<div className='bg-gradient-to-r from-content1 to-content1-100 h-[8.75rem] pl-6 pt-10 rounded-tr-borderRadius12px rounded-tl-borderRadius12px'>
 				<div className='relative'>
 					<Image
 						alt='NextUI hero Image'
 						src='https://theshadehome.com/new-design/assets/images/service-window-blind.webp'
 						width={170}
 						height={150}
+						className='object-cover'
 					/>
 					<div className='absolute bottom-3 left-3 z-10'>
 						<RatingChip value={4.5} />
@@ -62,11 +63,13 @@ export default function Profile() {
 					}}
 				/>
 			</div>
-			<div className='pl-6 pb-4 w-[24.313rem]'>
-				<SpecializedInTag
-					specializedIn='Credit Management'
-					icon={<SpecializedInIcon />}
-				/>
+			<div className='pl-6 pb-4 grid grid-cols-12 '>
+				<div className='col-span-5'>
+					<SpecializedInTag
+						specializedIn='Credit Management'
+						icon={<SpecializedInIcon />}
+					/>
+				</div>
 			</div>
 			<div className='flex font-medium gap-[0.625rem] '>
 				<p className='pl-6 text-lg '>{name}</p>
@@ -76,7 +79,7 @@ export default function Profile() {
 			</div>
 			<div className=' mx-6 my-[0.375rem] flex justify-between'>
 				<div>
-					{skillData.map((skill, index) => (
+					{skillData?.map((skill, index) => (
 						<div key={skill.id} className='flex flex-col my-[0.375rem]'>
 							<PepoleSpeciality icon={skill.icon} title={skill.data} />
 						</div>

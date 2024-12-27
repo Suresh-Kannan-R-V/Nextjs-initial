@@ -1,9 +1,11 @@
 'use client';
 
 import { BreadCrums, TabBar } from '@core/ui/components';
+import OverallStats from './components/overallStats';
 import Overview from './components/overview';
 import Profile from './components/profile';
 import Review from './components/review';
+import SheduleCall from './components/scheduleCall';
 
 export default function page() {
 	const overviewData = {
@@ -65,9 +67,9 @@ export default function page() {
 						<TabBar tabs={tabData} width={49} />
 					</div>
 				</div>
-				<div className='bg-red-300 col-span-2'>
-					<div>Overall Stats of Nancy</div>
-					<div>Schedule Call</div>
+				<div className='col-span-2 flex flex-col gap-4'>
+					<OverallStats />
+					<SheduleCall />
 				</div>
 			</div>
 		</div>

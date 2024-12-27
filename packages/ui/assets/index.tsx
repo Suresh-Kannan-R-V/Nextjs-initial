@@ -23,3 +23,5 @@ export { RightArrow } from './images/rightarrow';
 export { Linkedin } from './images/linkedin';
 export { Twitter } from './images/x';
 export { Facebook } from './images/facebook'; //
+export { AttendedCallIcon } from './images/attendedCallIcon';
+export { CallDurationIcon } from './images/callDurationIcon';
