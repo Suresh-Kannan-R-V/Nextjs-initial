@@ -28,7 +28,7 @@ const Header: React.FC<props> = ({ length = 0 }) => {
 				Explore Advisor's ({length})
 			</p>
 
-			<div className=' flex gap-3  md:ml-0  lg:ml-60 col-span-1'>
+			<div className=' flex gap-3  md:ml-0  lg:ml-56 col-span-1'>
 				<span>
 					<SearchBar
 						placeholder='Search'

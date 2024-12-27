@@ -1,17 +1,18 @@
 'use client';
 import { Button } from '@nextui-org/button';
 import { Loader } from 'assets';
+import type { JSXElementConstructor, ReactElement } from 'react';
 
 interface ButtonProps {
 	id?: string;
 	text?: string;
-	width?: number;
+	width?: string | number;
 	padding?: string;
 	onPress?: () => void;
 	icon?: React.ReactNode;
 	startIcon?: React.ReactNode;
 	endIcon?: React.ReactNode;
-	variant: 'solid' | 'flat' | 'bordered' | 'light';
+	variant?: 'solid' | 'flat' | 'bordered' | 'light';
 	size?: 'sm' | 'md' | 'lg';
 	radius?: 'sm' | 'md' | 'lg' | 'full';
 	color?:
@@ -21,10 +22,11 @@ interface ButtonProps {
 		| 'success'
 		| 'warning'
 		| 'danger';
+	className?: string;
 	disabled?: boolean;
 	loading?: boolean;
 	isExternal?: boolean;
-	weight?: string;
+	weight?: 'regular' | 'medium' | 'semibold' | 'bold';
 	fontsize?: string;
 }
 
@@ -41,9 +43,10 @@ export const ButtonStyled = ({
 	size = 'md',
 	radius = 'md',
 	color = 'primary',
+	className,
 	disabled = false,
 	loading = false,
-	weight,
+	weight = 'medium',
 	fontsize,
 }: ButtonProps) => {
 	return (
@@ -55,13 +58,12 @@ export const ButtonStyled = ({
 				variant={variant}
 				color={color}
 				className={`relative font-medium border-1 ${
-					variant === 'light'
-						? 'border-none hover:bg-background-50 focus:outline-none'
-						: ''
-				}`}
+					variant === 'light' &&
+					'border-none hover:bg-background-50 focus:outline-none'
+				} ${className}`}
 				style={{
-					width: width ? `${width}rem` : 'auto',
-					padding: padding ? `${padding}rem` : 'auto',
+					width: width && `${width}rem`,
+					padding: padding && padding,
 				}}
 				isIconOnly={!!icon}
 				disabled={disabled}

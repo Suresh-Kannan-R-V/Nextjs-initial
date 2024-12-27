@@ -8,13 +8,13 @@ interface SvgIconProps {
 	size?: number;
 }
 
-export const FilterIcon: React.FC<SvgIconProps> = ({
+export const FilterIcon = ({
 	width,
 	height,
 	size,
 	fill = '#555555',
 	isfilled = true,
-}) => {
+}: SvgIconProps) => {
 	return (
 		<svg
 			width={size ?? width ?? '16'}

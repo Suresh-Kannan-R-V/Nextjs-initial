@@ -7,6 +7,7 @@ import {
 	Navbar,
 	PepoleSpeciality,
 	SearchBar,
+	SideNavBar,
 	Slotcard,
 	Tag,
 } from '@core/ui/components';
@@ -16,6 +17,7 @@ const data = [
 	{
 		id: 1,
 		name: 'Nancy John Sarikha',
+		img: 'https://wallpapercave.com/wp/wp12350078.jpg',
 		status: 'active',
 		work_experience: 3,
 		rating: 4.5,
@@ -30,6 +32,7 @@ const data = [
 	{
 		id: 2,
 		name: 'John',
+		img: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg',
 		status: 'in-call',
 		work_experience: 5,
 		rating: 4.8,
@@ -43,8 +46,9 @@ const data = [
 	},
 	{
 		id: 3,
-		name: 'Alice',
+		name: 'Lara',
 		status: 'active',
+		img: 'https://www.leathercelebrities.com/images/uploads/20826/millie_bobby_brown_attends_the_stranger_things_2_premiere_(209).jpg',
 		work_experience: 2,
 		rating: 4.2,
 		recommended: 'Recommended',
@@ -59,6 +63,7 @@ const data = [
 		id: 4,
 		name: 'Mike',
 		status: 'active',
+		img: 'https://wallpapers.com/images/hd/4k-captain-america-3840-x-2160-background-fgo6gm0xbv7a12pt.jpg',
 		work_experience: 4,
 		rating: 4.7,
 		recommended: 'Top Performer',
@@ -77,6 +82,8 @@ const data = [
 	{
 		id: 5,
 		name: 'Sophia',
+		img: 'https://wallpapercave.com/wp/wp1852516.jpg',
+
 		status: 'in-call',
 		work_experience: 6,
 		rating: 4.9,
@@ -92,8 +99,9 @@ const data = [
 
 export default function page() {
 	return (
-		<div className='my-7 flex  flex-col mx-10  ml-[84px]'>
+		<div className='my-7 flex  flex-col mx-8 '>
 			<Header length={data.length} />
+
 			<div className='grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
 				{data?.map((item) => (
 					<AdvisorCard
@@ -110,6 +118,7 @@ export default function page() {
 						is_discounted={item.is_discounted}
 						discounted_credicts={item.discounted_credicts}
 						credicts={item.credicts}
+						img={item?.img}
 					/>
 				))}
 			</div>

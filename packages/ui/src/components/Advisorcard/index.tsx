@@ -20,6 +20,7 @@ type Status = 'active' | 'in-call' | 'offline';
 interface Props {
 	id?: number;
 	name?: string;
+	img?: string;
 	status?: Status;
 	work_experience?: number;
 	rating?: number;
@@ -35,16 +36,17 @@ interface Props {
 export const AdvisorCard: React.FC<Props> = ({
 	id,
 	name = 'unknown',
-	status,
-	work_experience,
-	rating,
-	recommended,
-	calls_attended,
-	skill_sets,
-	known_languages,
+	status = 'offline',
+	work_experience = 0,
+	rating = 0,
+	recommended = 'null',
+	calls_attended = 0,
+	skill_sets = [],
+	known_languages = [],
 	is_discounted,
-	discounted_credicts,
-	credicts,
+	discounted_credicts = 0,
+	credicts = 0,
+	img = '',
 }) => {
 	const [isliked, serIsliked] = useState(false);
 
@@ -66,7 +68,7 @@ export const AdvisorCard: React.FC<Props> = ({
 					className='w-full object-cover h-[200px] rounded-t-borderRadius10px rounded-b-none'
 					radius='lg'
 					shadow='sm'
-					src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg'
+					src={img}
 					width='100%'
 				/>
 				<Tag
@@ -91,30 +93,30 @@ export const AdvisorCard: React.FC<Props> = ({
 				</div>
 				<div className='flex'>
 					<p className='text-body2 font-medium  text-foreground-800 '>
-						{work_experience ?? 0} Years Experience{' '}
-						<span className='px-1'>|</span> {calls_attended ?? 0} Calls Attended
+						{work_experience} Years Experience <span className='px-1'>|</span>{' '}
+						{calls_attended ?? 0} Calls Attended
 					</p>
 				</div>
 				<hr className='mt-4 mb-3' />
 				<div className='flex flex-col gap-2 mt-2  '>
 					<PepoleSpeciality
 						icon={<Vector width={10.69} height={15.75} fill='555555' />}
-						title={skill_sets ?? []}
+						title={skill_sets}
 					/>
 					<PepoleSpeciality
 						icon={<LanguageIcon width={10.69} height={15.75} fill='#555555' />}
-						title={known_languages ?? []}
+						title={known_languages}
 					/>
 				</div>
 				<div className='flex flex-row justify-between mt-3 px-2 py-4 bg-primary-50 rounded-borderRadius8px items-center  whitespace-nowrap w-full'>
 					<div>
 						{is_discounted && (
 							<p className='line-through text-footnote text-foreground-800'>
-								{discounted_credicts ?? 0} credicts
+								{discounted_credicts} credicts
 							</p>
 						)}
 						<p className='text-body1 text-primary-500'>
-							{credicts ?? 0} Credicts /Min
+							{credicts} Credicts /Min
 						</p>
 					</div>
 					<div className='flex gap-3'>

@@ -13,11 +13,11 @@ const StarValue = ({
 }: { value: number; starValue: number }) => {
 	if (value >= starValue) {
 		return 'full';
-	} else if (value >= starValue - 0.5) {
-		return 'half';
-	} else {
-		return 'none';
 	}
+	if (value >= starValue - 0.5) {
+		return 'half';
+	}
+	return 'none';
 };
 export const ReviewStar = ({ id, value = 0 }: ReviewStarProps) => {
 	return (

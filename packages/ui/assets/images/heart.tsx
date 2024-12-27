@@ -9,7 +9,7 @@ interface IconProps extends React.SVGProps<SVGSVGElement> {
 	strokeWidth?: number;
 }
 
-export const HeartIcon: React.FC<IconProps> = ({
+export const HeartIcon = ({
 	fill = '#000',
 	filled,
 	size,
@@ -17,7 +17,7 @@ export const HeartIcon: React.FC<IconProps> = ({
 	width,
 	strokeWidth,
 	...props
-}) => {
+}: IconProps) => {
 	return (
 		<svg
 			fill={filled ? '#DF3813' : '#C0C0C0'}
