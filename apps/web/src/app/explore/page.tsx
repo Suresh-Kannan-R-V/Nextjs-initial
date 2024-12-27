@@ -82,9 +82,9 @@ const data = [
 	{
 		id: 5,
 		name: 'Sophia',
-		img: 'https://wallpapercave.com/wp/wp1852516.jpg',
 
 		status: 'in-call',
+		img: 'https://wallpapercave.com/wp/wp1852516.jpg',
 		work_experience: 6,
 		rating: 4.9,
 		recommended: 'offline',
@@ -93,7 +93,7 @@ const data = [
 		known_languages: ['Telugu', 'English'],
 		is_discounted: true,
 		discounted_credicts: 60,
-		credicts: 55,
+		credicts: 50,
 	},
 ];
 
