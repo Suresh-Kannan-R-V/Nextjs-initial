@@ -99,7 +99,7 @@ const data = [
 
 export default function page() {
 	return (
-		<div className='my-7 flex  flex-col mx-8 '>
+		<div className='my-7 flex  flex-col mx-8  '>
 			<Header length={data.length} />
 
 			<div className='grid grid-flow-row lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
