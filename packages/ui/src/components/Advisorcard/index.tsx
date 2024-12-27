@@ -9,6 +9,7 @@ import {
 import { PepoleSpeciality } from '@components/componentStyled/peoplespecialityInfo';
 
 import {
+	Bookingimg,
 	HeartIcon,
 	LanguageIcon,
 	SpecializedInIcon,
@@ -87,7 +88,7 @@ export const AdvisorCard: React.FC<Props> = ({
 					<p className='text-body1 font-semibold text-foreground-foreground'>
 						{name}
 					</p>
-					<StatusChip status={status} radius='sm' weight='semibold' />
+					<StatusChip status={status} radius='sm' weight='medium' />
 				</div>
 				<div className='flex'>
 					<p className='text-body2 font-medium  text-foreground-800 '>
@@ -128,7 +129,7 @@ export const AdvisorCard: React.FC<Props> = ({
 						/>
 						<ButtonStyled
 							variant='solid'
-							text='call'
+							text='Call'
 							radius='md'
 							width={5.625}
 							weight='medium'

@@ -23,8 +23,8 @@ export const Tag: React.FC<NamingData> = ({
 	left,
 	right,
 	bottom,
-	radius,
-	textcolor = 'text-foreground-800',
+	radius = 'sm',
+	textcolor,
 }) => {
 	return (
 		<Card
@@ -39,7 +39,11 @@ export const Tag: React.FC<NamingData> = ({
 			radius={radius}
 		>
 			<CardBody className='flex justify-center w-[fit-content] px-2 py-1'>
-				<p className={`text-footnote ${textcolor} `}>{name}</p>
+				<p
+					className={`text-footnote font-medium text-default-100 ${textcolor} `}
+				>
+					{name}
+				</p>
 			</CardBody>
 		</Card>
 	);

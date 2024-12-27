@@ -1,7 +1,6 @@
 'use client';
 import { Button } from '@nextui-org/button';
 import { Loader } from 'assets';
-import type { JSXElementConstructor, ReactElement } from 'react';
 
 interface ButtonProps {
 	id?: string;
@@ -14,7 +13,7 @@ interface ButtonProps {
 	endIcon?: React.ReactNode;
 	variant?: 'solid' | 'flat' | 'bordered' | 'light';
 	size?: 'sm' | 'md' | 'lg';
-	radius?: 'sm' | 'md' | 'lg' | 'full';
+	radius?: 'none' | 'sm' | 'md' | 'lg' | 'full';
 	color?:
 		| 'default'
 		| 'primary'
@@ -57,7 +56,7 @@ export const ButtonStyled = ({
 				size={size}
 				variant={variant}
 				color={color}
-				className={`relative font-medium border-1 ${
+				className={`relative font-medium border-1 w-full ${
 					variant === 'light' &&
 					'border-none hover:bg-background-50 focus:outline-none'
 				} ${className}`}

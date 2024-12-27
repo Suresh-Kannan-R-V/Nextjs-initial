@@ -1,15 +1,5 @@
 'use client';
-import { FilterIcon, SearchIcon, SortIcon, Vector } from '@core/ui/assets';
-import {
-	AdvisorCard,
-	IconButton,
-	InfoCard,
-	Navbar,
-	PepoleSpeciality,
-	SearchBar,
-	Slotcard,
-	Tag,
-} from '@core/ui/components';
+import { AdvisorCard } from '@core/ui/components';
 import Header from './header';
 
 const data = [

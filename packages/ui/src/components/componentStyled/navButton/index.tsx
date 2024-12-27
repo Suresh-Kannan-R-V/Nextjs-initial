@@ -29,7 +29,7 @@ export const NavButton = ({
 				})}
 			</div>
 			<p
-				className={`text-footnote text-medium ${isActive ? 'text-primary-500' : 'text-default-100'}`}
+				className={`text-footnote font-medium ${isActive ? 'text-primary-500' : 'text-default-100'}`}
 			>
 				{label}
 			</p>

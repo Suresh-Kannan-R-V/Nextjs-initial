@@ -3,7 +3,7 @@ import { ButtonStyled, Logo } from '@core/ui/components';
 import { Button, Link } from '@nextui-org/react';
 import { usePathname } from 'next/navigation';
 import { forwardRef, useEffect, useState } from 'react';
-import { Logoimg } from '../../../../assets/index';
+import { Bookingimg, LanguageIcon, Logoimg } from '../../../../assets/index';
 
 interface NavbarProps {
 	id?: string;
@@ -70,6 +70,8 @@ export const Navbar = forwardRef<HTMLDivElement, NavbarProps>((props, ref) => {
 									text='Login'
 									onPress={() => alert('Login')}
 									variant='bordered'
+									// startIcon={<Bookingimg />}
+									// icon={<LanguageIcon />}
 								/>
 
 								<ButtonStyled
