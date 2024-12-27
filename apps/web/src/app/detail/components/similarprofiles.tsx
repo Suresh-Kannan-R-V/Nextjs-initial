@@ -1,4 +1,3 @@
-'use client';
 import { ArrowTitle, Cards } from '@core/ui/components';
 
 export default function Page() {
@@ -66,7 +65,7 @@ export default function Page() {
 	];
 
 	return (
-		<div>
+		<div className='w-3/5 overflow-x-hidden'>
 			<ArrowTitle
 				title='Similar Profiles'
 				data={card1.map((Data) => (

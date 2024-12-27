@@ -6,6 +6,7 @@ import Overview from './components/overview';
 import Profile from './components/profile';
 import Review from './components/review';
 import SheduleCall from './components/scheduleCall';
+import Page from './components/similarprofiles';
 
 export default function page() {
 	const overviewData = {
@@ -58,7 +59,7 @@ export default function page() {
 					/>
 				))}
 			</div>
-			<div className='grid grid-cols-5 gap-5'>
+			<div className='grid grid-cols-5 gap-5 mb-7'>
 				<div className='col-span-3 rounded-borderRadius12px border-1 border-foreground-500 '>
 					<Profile />
 					<div className='ml-6'>overview / Reviews & Ratings</div>
@@ -70,6 +71,11 @@ export default function page() {
 				<div className='col-span-2 flex flex-col gap-4'>
 					<OverallStats />
 					<SheduleCall />
+				</div>
+			</div>
+			<div className='mt-6'>
+				<div>
+					<Page />
 				</div>
 			</div>
 		</div>

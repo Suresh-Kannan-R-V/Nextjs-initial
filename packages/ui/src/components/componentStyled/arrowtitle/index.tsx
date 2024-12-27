@@ -34,7 +34,7 @@ export const ArrowTitle: React.FC<ArrowTitleProps> = (props) => {
 				<span className='regular text-body2 font-popIns text-foreground-900'>
 					{title}
 				</span>
-				<span className='flex gap-1'>
+				<span className='flex gap-1 '>
 					<span>
 						<ReverseArrowIcon isdisabled={start === 0} onClick={handlePrev} />
 					</span>
@@ -46,7 +46,7 @@ export const ArrowTitle: React.FC<ArrowTitleProps> = (props) => {
 					</span>
 				</span>
 			</span>
-			<div className='data-list flex justify-between'>
+			<div className='data-list flex justify-between '>
 				{data?.slice(start, end)?.map((item, index) => (
 					<div key={index} className='data-item'>
 						{item}
